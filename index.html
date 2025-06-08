@@ -1,0 +1,214 @@
+---
+layout: default
+---
+
+<!-- ========== About ========== -->
+<div class="docs-section" id="about">
+  <h4>About</h4>
+  <p>
+    I am a first-year Ph.D. student at Korea Advanced Institute of Science and
+    Technology (<a href="https://www.kaist.ac.kr/en/">KAIST</a>), advised by
+    Prof. <a href="https://sites.google.com/view/kiminlee/">Kimin Lee</a> and
+    <a href="https://alinlab.kaist.ac.kr/shin.html">Jinwoo Shin</a>. I received
+    a B.S. degree in computer science at KAIST. I am currently interested in
+    developing capable and safe generative AI, focusing especially on diffusion
+    models and large language models.
+  </p>
+</div>
+
+<!-- ========== PUBLICATIONS ========== -->
+<div class="docs-section" id="publications">
+  <h4>Publications</h4>
+
+  <ul class="tab-nav">
+    <li>
+      <div class="button active" data-ref="#papers-selected">Selected</div>
+    </li>
+    <li><div class="button" data-ref="#papers-all">All</div></li>
+  </ul>
+
+  <div class="tab-content">
+    <div class="tab-pane active" id="papers-selected">
+      {% assign selected_papers = site.data.publications.papers | where:
+      "selected", "y" %} {% for paper in selected_papers %}
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b></p>
+        <p>{{ paper.authors }}</p>
+        <p><i>{{ paper.venue }}</i></p>
+        {% if paper.venue2 %}
+        <p><i>{{ paper.venue2 }}</i></p>
+        {% endif %}
+        <div class="paper-buttons">
+          {% if paper.paper_pdf %}
+          <a class="button" href="{{ paper.paper_pdf }}" target="_blank"
+            >Paper</a
+          >
+          {% endif %} {% if paper.arxiv %}
+          <a class="button" href="{{ paper.arxiv }}" target="_blank">arXiv</a>
+          {% endif %} {% if paper.slides %}
+          <a class="button" href="{{ paper.slides }}" target="_blank">Slides</a>
+          {% endif %} {% if paper.website %}
+          <a class="button" href="{{ paper.website }}" target="_blank"
+            >Website</a
+          >
+          {% endif %} {% if paper.poster %}
+          <a class="button" href="{{ paper.poster }}" target="_blank">Poster</a>
+          {% endif %} {% if paper.video %}
+          <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %} {% if paper.code %}
+          <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %} {% if paper.data %}
+          <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+
+    <div class="tab-pane" id="papers-all">
+      {% for paper in site.data.publications.papers %}
+      <div class="paper">
+        <p class="title"><b>{{ paper.title }}</b></p>
+        <p>{{ paper.authors }}</p>
+        <p><i>{{ paper.venue }}</i></p>
+        {% if paper.venue2 %}
+        <p><i>{{ paper.venue2 }}</i></p>
+        {% endif %}
+        <div class="paper-buttons">
+          {% if paper.paper_pdf %}
+          <a
+            class="button"
+            href="{{ paper.paper_pdf | prepend: site.baseurl }}"
+            target="_blank"
+            >Paper</a
+          >
+          {% endif %} {% if paper.arxiv %}
+          <a
+            class="button"
+            href="{{ paper.arxiv | prepend: site.baseurl }}"
+            target="_blank"
+            >Arxiv</a
+          >
+          {% endif %} {% if paper.slides %}
+          <a
+            class="button"
+            href="{{ paper.slides | prepend: site.baseurl }}"
+            target="_blank"
+            >Slides</a
+          >
+          {% endif %} {% if paper.website %}
+          <a
+            class="button"
+            href="{{ paper.website | prepend: site.baseurl }}"
+            target="_blank"
+            >Website</a
+          >
+          {% endif %} {% if paper.poster %}
+          <a
+            class="button"
+            href="{{ paper.poster | prepend: site.baseurl }}"
+            target="_blank"
+            >Poster</a
+          >
+          {% endif %} {% if paper.video %}
+          <a class="button" href="{{ paper.video }}" target="_blank">Video</a>
+          {% endif %} {% if paper.code %}
+          <a class="button" href="{{ paper.code }}" target="_blank">Code</a>
+          {% endif %} {% if paper.data %}
+          <a class="button" href="{{ paper.data }}" target="_blank">Data</a>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<!-- ========== Education ========== -->
+<div class="docs-section" id="education">
+  <h4>Education</h4>
+  <div class="paper">
+    <p class="title">
+      <b
+        >Korea Advanced Institute of Science and Technology (KAIST)<b
+          style="float: right"
+          >Sep. 2023 - Present</b
+        ></b
+      >
+    </p>
+    <p>Ph.D. Student in Artificial Intelligence</p>
+  </div>
+  <div class="paper">
+    <p class="title">
+      <b
+        >Korea Advanced Institute of Science and Technology (KAIST)<b
+          style="float: right"
+          >Mar. 2019 - Aug. 2023</b
+        ></b
+      >
+    </p>
+    <p>B.S. in Computer Science <em>(summa cum laude)</em></p>
+  </div>
+</div>
+
+<!-- ========== Experience ========== -->
+<div class="docs-section" id="experience">
+  <h4>Experience</h4>
+  <div class="paper">
+    <p class="title">
+      <b
+        >Chief Technology Officer and Co-founder<b style="float: right"
+          >Jan. 2022 - Jan. 2023</b
+        ></b
+      >
+    </p>
+    <a
+      href="https://plumed.kr/"
+      style="display: inline-block; margin-bottom: 6px"
+      >PLUME.D</a
+    >
+    <ul style="margin: 1px; padding-left: 10px; line-height: 1.55">
+      <li style="margin-bottom: 6px">
+        Proposed and prototyped AvaKit, the company's core product, securing ₩1B
+        (≈$700K) in private and government funding while serving as the CTO.
+      </li>
+      <li style="margin-bottom: 6px">
+        <strong>1st place</strong> (of 876 teams),
+        <em>11th Chung Ju-Young Startup Competition</em> (largest private
+        startup contest in Korea).
+      </li>
+      <li>
+        <strong>2nd place</strong> (of 5,420 teams),
+        <em>K-Startup Grand Challenge 2022</em> (largest government startup
+        contest in Korea).
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- ========== Academic Services ========== -->
+<div class="docs-section" id="services">
+  <h4>Academic Services</h4>
+  <div class="paper">
+    <p class="title"><b>Journal Reviewer</b>, TMLR</p>
+  </div>
+</div>
+
+<!-- ========== Honors & Awards ========== -->
+<div class="docs-section" id="honors">
+  <h4>Honors & Awards</h4>
+  <div class="paper">
+    <p class="title">
+      <b>Dean's List</b>, KAIST College of Engineering (2020F)<b
+        style="float: right"
+        >Jan. 2021</b
+      >
+    </p>
+  </div>
+  <div class="paper">
+    <p class="title">
+      <b>Recipient</b>, National Science and Engineering Undergraduate
+      Scholarship<b style="float: right">May. 2020</b>
+    </p>
+  </div>
+</div>

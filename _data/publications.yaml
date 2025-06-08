@@ -1,0 +1,41 @@
+papers:
+  - title: "[C5] Enhancing LLM Agent Safety via Causal Influence Prompting"
+    authors: "<a href='https://sites.google.com/view/kiminlee/group'>Dongyoon Hahm</a>, <a href='https://sites.google.com/view/kiminlee/group'>Woogyeol Jin</a>, <b><u>June Suk Choi</u></b>, <a href='https://sites.google.com/view/sungsooahn0215'>Sungsoo Ahn</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee</a>"
+    venue: "Findings of the Association for Computational Linguistics <b>(ACL Findings)</b>, 2025"
+    selected: y
+
+  - title: "[C4] Silent Branding Attack: Trigger-free Data Poisoning Attack on Text-to-Image Diffusion Models"
+    authors: "<a href='https://agwmon.github.io/'>Sangwon Jang</a>, <b><u>June Suk Choi</u></b>, <a href='https://harryjo97.github.io/'>Jaehyeong Jo</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee<sup>^</sup></a>, <a href='http://www.sungjuhwang.com/'>Sung Ju Hwang<sup>^</sup></a>"
+    venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b>, 2025"
+    arxiv: https://arxiv.org/abs/2503.09669
+    website: "https://silent-branding.github.io/"
+    selected: y
+
+  - title: "[C3] DiffusionGuard: A Robust Defense Against Malicious Diffusion-based Image Editing"
+    authors: "<b><u>June Suk Choi</u></b>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://jh-jeong.github.io/'>Jongheon Jeong</a>, <a href='https://www.sainingxie.com/'>Saining Xie</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee</a>"
+    venue: "International Conference on Learning Representations <b>(ICLR)</b>, 2025"
+    arxiv: https://arxiv.org/abs/2410.05694
+    code: "https://github.com/choi403/DiffusionGuard"
+    selected: y
+
+  - title: "[C2] DiffExp: Efficient Exploration in Reward Fine-tuning for Text-to-Image Diffusion Models"
+    authors: "<a href='https://daewon88.github.io/'>Daewon Chae<sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></a>, <b><u>June Suk Choi</u><sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></b>, <a href='https://visionai.korea.ac.kr/'>Jinkyu Kim<sup>^</sup></a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee<sup>^</sup></a>"
+    venue: "AAAI Conference on Artificial Intelligence <b>(AAAI)</b>, 2025<span style='color:#ff0a33; font-style:normal; margin-left: 7px; font-weight:bold'>(Oral Presentation, 547/12957=4.2%)</span>"
+    arxiv: https://arxiv.org/abs/2502.14070
+    selected: y
+
+  - title: "[C1] Collaborative Score Distillation for Consistent Visual Editing"
+    authors: "<a href='https://subin-kim-cv.github.io/'>Subin Kim<sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></a>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee<sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></a>, <b><u>June Suk Choi</u></b>, <a href='https://jh-jeong.github.io/'>Jongheon Jeong</a>, <a href='https://sites.google.com/site/kihyuksml/'>Kihyuk Sohn</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>"
+    venue: "Conference on Neural Information Processing Systems <b>(NeurIPS)</b>, 2023"
+    website: "https://subin-kim-cv.github.io/CSD/"
+    arxiv: "https://arxiv.org/abs/2307.04787"
+    code: "https://github.com/subin-kim-cv/CSD/"
+    selected: y
+
+  - title: "[P1] MobileSafetyBench: Evaluating Safety of Autonomous Agents in Mobile Device Control"
+    authors: "<a href='https://jylee425.github.io/'>Juyong Lee<sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></a>, <a href='https://sites.google.com/view/kiminlee/group/'>Dongyoon Hahm<sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></a>, <b><u>June Suk Choi</u><sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></b>, <a href='https://bradknox.net/'>W. Bradley Knox</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee</a>"
+    venue: "Preprint"
+    website: "https://mobilesafetybench.github.io/"
+    arxiv: "https://arxiv.org/abs/2410.17520"
+    code: "https://github.com/jylee425/mobilesafetybench"
+    selected: y

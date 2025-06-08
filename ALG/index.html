@@ -1,0 +1,1026 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <script
+    type="text/javascript"
+    charset="utf-8"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"
+  ></script>
+  <script
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+  ></script>
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+  />
+
+  <style type="text/css">
+    body {
+      /* font-family: "Titillium Web", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; */
+      font-family: "IBM Plex Sans", "Helvetica Neue", Helvetica, Arial,
+        sans-serif;
+      font-weight: 300;
+      font-size: 17px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media screen and (min-width: 980px) {
+      body {
+        width: 980px;
+      }
+    }
+
+    h1 {
+      font-weight: 300;
+      line-height: 1.15em;
+    }
+
+    h2 {
+      font-size: 1.8em;
+      padding-top: 2.5rem;
+      font-weight: 300 !important;
+    }
+    a:link,
+    a:visited {
+      color: #3d5a6a;
+      text-decoration: none;
+    }
+    a:hover {
+      color: #4b8672;
+    }
+    h1 {
+      text-align: center;
+    }
+    h2,
+    h3 {
+      text-align: left;
+    }
+
+    h1 {
+      font-size: 40px;
+      font-weight: 400;
+    }
+    h2 {
+      font-weight: 400;
+      margin: 16px 0px 0px 0px;
+    }
+    h3 {
+      font-weight: 500;
+      margin: 36px 0px 8px 0px;
+    }
+
+    .paper-title {
+      padding: 1px 0px 1px 0px;
+    }
+    section {
+      margin: 32px 0px 32px 0px;
+      text-align: justify;
+      clear: both;
+    }
+    .col-5 {
+      width: 20%;
+      float: left;
+    }
+    .col-4 {
+      width: 25%;
+      float: left;
+    }
+    .col-3 {
+      width: 33%;
+      float: left;
+    }
+    .col-2 {
+      width: 50%;
+      float: left;
+    }
+    .col-1 {
+      width: 100%;
+      float: left;
+    }
+
+    .author-row,
+    .affil-row {
+      font-size: 26px;
+    }
+
+    .author-row-new {
+      text-align: center;
+    }
+
+    .author-row-new a {
+      display: inline-block;
+      font-size: 20px;
+      padding: 3px 1.5px 7.5px 4.5px;
+    }
+
+    .author-row-new sup {
+      color: #313436;
+      font-size: 12px;
+    }
+
+    .affiliations {
+      font-size: 20px;
+      text-align: center;
+      width: 80%;
+      margin: 0 auto;
+      margin-bottom: -4px;
+    }
+
+    .row {
+      margin: 16px 0px 16px 0px;
+    }
+    .authors {
+      font-size: 26px;
+    }
+    .affil-row {
+      margin-top: 18px;
+    }
+    .teaser {
+      max-width: 100%;
+    }
+    .text-center {
+      text-align: center;
+    }
+    .screenshot {
+      width: 256px;
+      border: 1px solid #ddd;
+    }
+    .screenshot-el {
+      margin-bottom: 16px;
+    }
+    hr {
+      height: 1px;
+      border: 0;
+      border-top: 1px solid #ddd;
+      margin: 0;
+      margin-bottom: 0.75rem;
+    }
+    .material-icons {
+      vertical-align: -6px;
+    }
+    p {
+      line-height: 1.25em;
+    }
+    .caption {
+      font-size: 16px;
+      color: #666;
+      margin-top: 4px;
+      margin-bottom: 10px;
+    }
+    video {
+      display: block;
+      margin: auto;
+    }
+    figure {
+      display: block;
+      margin: auto;
+      margin-top: 10px;
+      margin-bottom: 10px;
+    }
+    #bibtex pre {
+      font-size: 14px;
+      background-color: #eee;
+      padding: 16px;
+    }
+    .green {
+      color: #0e710e;
+      font-weight: bold;
+    }
+    .orange {
+      color: #d35400;
+      font-weight: bold;
+    }
+    .flex-row {
+      display: flex;
+      flex-flow: row wrap;
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+
+    .coming-soon {
+      position: absolute;
+      top: -15px;
+      right: -15px;
+    }
+
+    .paper-btn:hover {
+      color: #ff8563;
+      transform: translateY(-2px);
+    }
+
+    .paper-btn-parent {
+      display: flex;
+      justify-content: center;
+      margin: 16px 0px;
+      gap: 25px;
+      font-size: 20px;
+    }
+
+    .github-btn:hover {
+      color: #ff8563;
+      transform: translateY(-2px);
+    }
+
+    .container {
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .venue {
+      font-size: 23px;
+    }
+
+    .topnav {
+      background-color: #eeeeee;
+      overflow: hidden;
+    }
+
+    .topnav div {
+      max-width: 1070px;
+      margin: 0 auto;
+    }
+
+    .topnav a {
+      display: inline-block;
+      color: black;
+      text-align: center;
+      vertical-align: middle;
+      padding: 16px 16px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .topnav img {
+      padding: 2px 0px;
+      width: 100%;
+      margin: 0.2em 0px 0.3em 0px;
+      vertical-align: middle;
+    }
+
+    pre {
+      font-size: 0.9em;
+      padding-left: 7px;
+      padding-right: 7px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      border-radius: 3px;
+      background-color: rgb(235, 235, 235);
+      overflow-x: auto;
+    }
+
+    .download-thumb {
+      display: flex;
+    }
+
+    @media only screen and (max-width: 620px) {
+      .download-thumb {
+        display: none;
+      }
+    }
+
+    .paper-stuff {
+      width: 50%;
+      font-size: 20px;
+    }
+
+    @media only screen and (max-width: 620px) {
+      .paper-stuff {
+        width: 100%;
+      }
+    }
+    * {
+      box-sizing: border-box;
+    }
+
+    .column {
+      text-align: center;
+      float: left;
+      width: 16.666%;
+      padding: 5px;
+    }
+    .column3 {
+      text-align: center;
+      float: left;
+      width: 33.333%;
+      padding: 5px;
+    }
+    .border-right {
+      border-right: 1px solid black;
+    }
+    .border-bottom {
+      border-bottom: 1px solid black;
+    }
+
+    /* Clearfix (clear floats) */
+    .row::after {
+      content: "";
+      clear: both;
+      display: table;
+    }
+
+    .image-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.25fr;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .image-grid img {
+      width: 100%;
+    }
+
+    .image-grid img:first-child {
+      object-fit: contain;
+    }
+    @media screen and (max-width: 500px) {
+      .column {
+        width: 100%;
+      }
+    }
+    @media screen and (max-width: 500px) {
+      .column3 {
+        width: 100%;
+      }
+    }
+
+    .figure img {
+      width: 100%;
+    }
+
+    .image-grid-three {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+      width: 90%;
+      justify-items: center;
+      margin: 0 auto;
+    }
+
+    .image-grid-three img {
+      width: 100%;
+    }
+
+    .image-grid-tab {
+      text-align: center;
+      justify-content: center;
+      display: grid;
+      place-items: center;
+      grid-template-columns: 1fr 1.22fr;
+      gap: 10px;
+      width: 90%;
+      justify-items: center;
+      margin: 0 auto;
+    }
+
+    .image-grid-tab img {
+      width: 100%;
+    }
+
+    blockquote {
+      font-weight: 300;
+      /* background-color: rgba(40, 40, 40, 0.2); */
+      background-color: #d8e3ea;
+      padding: 0px;
+      margin: 2px 0;
+      border-radius: 5px;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+
+    .video-pair {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: nowrap;
+    }
+    .video-card {
+      flex: 1 1 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .video-card video {
+      width: 100%;
+      height: auto;
+      /* aspect-ratio removed */
+      object-fit: contain;
+      border-radius: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .video-pair {
+        flex-direction: column;
+      }
+    }
+    .concat-video {
+      --scale: 1;
+      width: calc(var(--scale) * 100%);
+      max-width: 100%;
+      margin-inline: auto;
+      font: 15px/1.4 system-ui, sans-serif;
+    }
+
+    /* ——— replace your .cap-row-single block with this ——— */
+    .cap-row-single {
+      display: grid;
+      grid-template-columns: auto 1fr; /* icon + text */
+      column-gap: 0.5rem; /* space between icon & text */
+      align-items: center; /* vertically center icon/text */
+      text-align: left;
+      padding-inline: 0rem; /* ← restore your former padding */
+      margin: 0.4rem 0; /* same as before */
+      font-size: 0.9rem;
+      margin-bottom: 1rem;
+      cursor: pointer;
+    }
+
+    /* the little triangle */
+    .cap-row-single .toggle-icon {
+      /* keeps it lined up nicely and rotates smoothly */
+      transition: transform 0.2s ease;
+    }
+
+    /* collapsed: single‐line, ellipsis */
+    .cap-row-single.collapsed .caption-text {
+      white-space: nowrap;
+      overflow: hidden;
+      word-break: break-word;
+      text-overflow: ellipsis;
+    }
+
+    /* expanded: full wrap */
+    .cap-row-single.expanded .caption-text {
+      white-space: normal;
+    }
+
+    /* rotate the triangle down when expanded */
+    .cap-row-single.expanded .toggle-icon {
+      transform: rotate(90deg);
+    }
+
+    .cap-row-single-center {
+      display: grid;
+      grid-template-columns: 1fr; /* left / right halves           */
+      /* column-gap: 0.5rem; */
+      text-align: center;
+      margin: 0.4rem 0; /* space above / below the row   */
+      font-size: 0.9rem; /* ↑ adjust this to taste */
+      /* padding-inline: 0.9rem;  */
+      margin-bottom: 2rem;
+    }
+
+    /* ——— 2.  Shared styles for caption rows (top & bottom) ———— */
+    .cap-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr; /* left / right halves           */
+      column-gap: 0.5rem;
+      text-align: center;
+      margin: 0.4rem 0; /* space above / below the row   */
+    }
+    .cap-row.top {
+      font-weight: 300;
+      font-size: 1.2rem; /* ↑ adjust this to taste */
+    } /* emphasise model names       */
+    .cap-row.top.three {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* three equal columns */
+      column-gap: 0.5rem; /* spacing between captions */
+      font-weight: 300;
+      font-size: 1.1rem; /* ↑ adjust this to taste */
+    } /* emphasise model names       */
+    .cap-row.bottom {
+      font-size: 0.9em;
+      font-weight: 300;
+    }
+    .cap-row.three {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr); /* three equal columns */
+      column-gap: 0.5rem; /* spacing between captions */
+      text-align: center; /* center the text */
+      margin: 0.4rem 0; /* space above/below the row */
+      font-size: 0.9rem; /* match your other bottoms */
+      font-weight: 300;
+    }
+
+    .concat-video video {
+      display: block; /* remove inline-block gap               */
+      width: 100%;
+      height: auto;
+      /* aspect-ratio removed */
+      object-fit: contain;
+    }
+
+    /* Hide WebKit (Chrome, Safari, Edge) controls */
+    video::-webkit-media-controls-panel,
+    video::-webkit-media-controls-enclosure,
+    video::-webkit-media-controls {
+      display: none !important;
+    }
+
+    /* Hide Firefox controls */
+    video::-moz-media-controls-panel {
+      display: none !important;
+    }
+
+    .abstract-structured-content p {
+      margin-bottom: 1em; /* Add some space between paragraphs */
+    }
+    .abstract-structured-content p:last-child {
+      margin-bottom: -1em; /* No extra space after the last paragraph */
+    }
+
+    .paper-btn {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.45em 0.9em;
+      font-size: 0.9em;
+      font-weight: 400;
+      color: #ffffff;
+      text-decoration: none;
+      border-radius: 0.5rem;
+      transition: transform 0.2s, background-color 0.2s;
+      margin-right: -0.75em;
+    }
+    .paper-btn i {
+      margin-right: 0.375em;
+    }
+    .arxiv-btn {
+      background: #ffffff;
+      color: #40667b !important;
+      margin-left: -0.75em;
+    }
+    .arxiv-btn:hover {
+      background: #cddee7;
+      color: #335263 !important;
+      transform: translateY(-2px);
+    }
+    .code-btn {
+      background: #ffffff;
+      color: #40667b !important;
+    }
+    .code-btn:hover {
+      background: #cddee7;
+      color: #335263 !important;
+      transform: translateY(-2px);
+    }
+
+    .gallery-btn {
+      background: #ffffff;
+      color: #40667b !important;
+    }
+    .gallery-btn:hover {
+      background: #cddee7;
+      color: #335263 !important;
+      transform: translateY(-2px);
+    }
+  </style>
+
+  <script type="text/javascript" src="../js/hidebib.js"></script>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+    rel="stylesheet"
+  />
+
+  <head>
+    <title>
+      Enhancing Motion Dynamics of Image-to-Video Models via Adaptive Low-Pass
+      Guidance
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=FontAwesome"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="paper-title">
+        <h1>
+          Enhancing Motion Dynamics of Image-to-Video Models via Adaptive
+          Low-Pass Guidance
+        </h1>
+      </div>
+
+      <div id="authors">
+        <center>
+          <div class="author-row-new">
+            <a href="https://choi403.github.io/">June Suk Choi</a>,
+            <a href="https://kyungmnlee.github.io/">Kyungmin Lee</a>,
+            <a href="https://sihyun.me">Sihyun Yu</a>,
+            <a
+              href="https://scholar.google.com/citations?user=pM4aZGYAAAAJ&hl=en"
+              >Yisol Choi</a
+            >, <a href="https://alinlab.kaist.ac.kr/shin.html">Jinwoo Shin</a>,
+            <a href="https://sites.google.com/view/kiminlee">Kimin Lee</a>
+          </div>
+        </center>
+        <center>
+          <div class="affiliations"><span>KAIST</span>&nbsp;&nbsp;&nbsp;</div>
+        </center>
+        <center>
+          <div class="paper-btn-parent">
+            <a
+              href="https://arxiv.org/abs/XXXX.XXXXX"
+              class="paper-btn arxiv-btn"
+              target="_blank"
+            >
+              <i class="fas fa-file-alt"></i> arXiv
+            </a>
+            <a
+              href="http://github.com/choi403/adaptive-low-pass-guidance"
+              class="paper-btn code-btn"
+              target="_blank"
+            >
+              <i class="fas fa-code"></i> Code
+            </a>
+            <a href="gallery/" class="paper-btn gallery-btn">
+              <i class="fas fa-photo-video"></i> Gallery
+            </a>
+          </div>
+        </center>
+      </div>
+
+      <div class="concat-video" style="--scale: 0.999">
+        <div class="cap-row top">
+          <span>OpenAI Sora</span>
+          <span>ALG (Our method) + LTX-Video</span>
+        </div>
+        <video
+          src="assets/vids/mammoth.mp4"
+          controls
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <div class="cap-row-single collapsed">
+          <span class="caption-text">
+            <strong style="font-weight: 600">Prompt:</strong>
+            Several giant wooly mammoths approach treading through a snowy
+            meadow, their long wooly fur lightly blows in the wind as they walk,
+            snow covered trees and dramatic snow capped mountains in the
+            distance, mid afternoon light with wispy clouds and a sun high in
+            the distance creates a warm glow, the low camera view is stunning
+            capturing the large furry mammal with beautiful photography, depth
+            of field.
+          </span>
+        </div>
+      </div>
+    </div>
+    <!-- ... -->
+    <section>
+      <h2>Overview</h2>
+      <hr />
+
+      <p>
+        Text-to-video (T2V) models excel at producing high-quality, dynamic
+        videos, and recent works have adapted these pre-trained T2V models for
+        image-to-video (I2V) generation to enhance visual controllability.
+        However, this adaptation often
+        <strong style="font-weight: 500"
+          >suppresses motion dynamics, yielding more static videos</strong
+        >
+        than their T2V counterparts.
+      </p>
+      <p>In this work, we analyze this phenomenon and identify that:</p>
+      <blockquote>
+        The suppression of motion in I2V models stems from the
+        <strong style="font-weight: 500"
+          >premature exposure to high-frequency details</strong
+        >
+        in the input image, which biases the sampling process toward a
+        <strong style="font-weight: 500">shortcut trajectory</strong> that
+        overfits to the static appearance of the reference image.
+      </blockquote>
+      <p>
+        To address this, we propose
+        <strong style="font-weight: 500"
+          >Adaptive Low-pass Guidance (ALG)</strong
+        >, a simple fix to the I2V model sampling process to generate more
+        dynamic videos without compromising video quality. Specifically, ALG
+        adaptively modulates the frequency content of the conditioning image by
+        <strong style="font-weight: 500; color: #3b6176"
+          >applying low-pass filtering to the input image</strong
+        >
+        at the early stage of denoising.
+      </p>
+
+      <figure class="figure" style="text-align: center">
+        <img
+          src="assets/imgs/method.png"
+          alt="Description of image"
+          style="
+            max-width: 85%;
+            height: auto;
+            margin-top: 0.75em;
+            margin-bottom: 0em;
+          "
+        />
+        <figcaption class="caption" style="text-align: center">
+          Our method (ALG) mitigates the motion suppression in I2V models by
+          adaptively modulating the frequency content of the input image.
+        </figcaption>
+      </figure>
+
+      <p>
+        Under VBench-I2V benchmark, ALG achieves an average improvement of 36%
+        in dynamic degree without a significant drop in video quality or image
+        fidelity.
+      </p>
+    </section>
+
+    <section>
+      <h2>Problem: Suppressed Motion in I2V Models</h2>
+      <hr />
+      <p>
+        Image-to-Video (I2V) models offer enhanced visual control by animating a
+        user-provided image from text prompts. However, these models, frequently
+        adapted from Text-to-Video (T2V) architectures, often produce
+        <strong style="font-weight: 500">much more static videos</strong>
+        than their T2V counterparts, even for dynamic descriptions.
+      </p>
+
+      <h3>Observation: T2V-I2V motion dynamics gap.</h3>
+      <p>
+        We first systemically quantify this "motion suppression". Specifically,
+        we compare T2V models to their I2V derivatives in a controlled setup:
+        videos were first generated by T2V models, and we use their initial
+        frames as I2V inputs with the same prompts. This lets us focus only on
+        the difference of conditioning mechanism, and rule out other factors
+        like model architecture or train data.
+      </p>
+      <p>
+        Quantitative evaluation in VBench reveals a consistent and significant
+        reduction
+        <strong style="font-weight: 500">only in video dynamicness</strong> for
+        I2V models (e.g., -18.6% for Wan 2.1), while other quality metrics
+        remain stable. This indicates that the I2V conditioning mechanism itself
+        is a primary contributor to the observed motion suppression.
+      </p>
+      <figure class="figure" style="text-align: center">
+        <img
+          src="assets/imgs/suppression.png"
+          alt="Table comparing T2V and I2V motion dynamics"
+          style="max-width: 80%"
+        />
+        <figcaption class="caption" style="text-align: center">
+          Significant drop in Dynamic Degree is seen for I2V models compared to
+          their T2V counterparts, while other factors remain more or less
+          similar; this gives us clue that the I2V conditioning mechanism is the
+          problematic factor.
+        </figcaption>
+      </figure>
+
+      <h3>
+        Hypothesis: Over-conditioning on high-frequency details lead to
+        "shortcuts."
+      </h3>
+      <p>
+        We hypothesize that this motion suppression stems from the I2V model's
+        premature over-conditioning on
+        <strong style="font-weight: 500">high-frequency components</strong>
+        (fine details, textures, sharp edges) present in the reference image.
+      </p>
+      <p>
+        To investigate further, we inspect the internal representation of DiT
+        denoiser (Wan 2.1) and visualize them using PCA. We observe that the
+        model rapidly "locks in" onto the static, fine-grained details, even
+        after just one denoising step. This early completion ("shortcut")
+        prematurely confines the generation trajectory, and hinders the
+        development of large, dynamic motion over time (which is expected in
+        natural coarse-to-fine generation trajectories).
+      </p>
+
+      <figure class="figure" style="text-align: center">
+        <img
+          src="assets/imgs/shortcut_orig.png"
+          alt="Visualization of shortcut effect in I2V generation"
+          style="max-width: 95%"
+        />
+        <figcaption class="caption">
+          I2V generation shows fine details locking in very early (t=0.02;
+          single denoising step), limiting the flexibilty of the sampling
+          trajectory.
+        </figcaption>
+      </figure>
+
+      <h3>Diagnosis: Low-pass filtering mitigates suppression at a cost.</h3>
+      <p>
+        To verify if the high-frequency detail indeed is the cause, we apply
+        low-pass filters (e.g., image downsampling) of varying strengths to the
+        input image before I2V generation. The results support our hypothesis:
+        <strong style="font-weight: 500"
+          >stronger low-pass filtering consistently increases the dynamic
+          degree</strong
+        >
+        of the generated videos.
+      </p>
+      <figure class="figure" style="text-align: center">
+        <img
+          src="assets/imgs/lp.png"
+          alt="Effect of low-pass filtering on motion dynamics and quality"
+          style="max-width: 80%"
+        />
+        <figcaption class="caption">
+          Low-pass filtering the input image improves motion but degrades
+          quality. (a) Increasing filter strength boosts Dynamic Degree but
+          reduces Aesthetic Quality (VBench). (b) Visual examples illustrate
+          this trade-off.
+        </figcaption>
+      </figure>
+
+      <h3>Low-pass filtering mitigates the "shortcut" effect.</h3>
+      <p>
+        Alongside this dynamicness enhancement, we observe the
+        <strong style="font-weight: 500">elimination of the "shortcut"</strong>
+        effect (bottom row):
+      </p>
+      <figure class="figure" style="text-align: center">
+        <img
+          src="assets/imgs/shortcut.png"
+          alt="Visualization of shortcut effect in I2V generation"
+          style="max-width: 95%"
+        />
+        <figcaption class="caption">
+          Low-pass filtering mitigates the "shortcut" effect and reverts it back
+          to the natural coarse-to-fine generation trajectory.
+        </figcaption>
+      </figure>
+      <p>
+        This reverts the trajectory back to a coarse-to-fine one, and allows
+        more flexibility in the trajectory. Thus, the sampling results in a more
+        dynamic video.
+      </p>
+    </section>
+
+    <section>
+      <h2>Method: Adaptive Low-Pass Guidance (ALG)</h2>
+      <hr />
+
+      <p>
+        However, the simple low-pass filtering "solution" discussed above has an
+        inherent trade-off: aggressive low-pass filtering degrades image
+        fidelity, as the model is conditioned on an blurred reference
+        (<em>i.e.</em>, impossible to recover original image). This motivates a
+        more nuanced sampling method:
+      </p>
+
+      <blockquote>
+        If the <strong style="font-weight: 500">early shortcut</strong> in the
+        trajectory causes motion suppression, can we
+        <strong style="font-weight: 500"
+          >bypass it with low-pass filtering in early sampling steps</strong
+        >, then
+        <strong style="font-weight: 500"
+          >reduce the filter strength later for image fidelity</strong
+        >?
+      </blockquote>
+
+      <figure class="figure" style="text-align: center">
+        <img
+          src="assets/imgs/method.png"
+          alt="Description of image"
+          style="
+            max-width: 85%;
+            height: auto;
+            margin-top: 0.75em;
+            margin-bottom: 0em;
+          "
+        />
+        <figcaption class="caption" style="text-align: center">
+          We apply low-pass filtering early on for dynamicness, and reduce
+          filter strength later for image fidelity.
+        </figcaption>
+      </figure>
+      <p style="margin-bottom: 8px">
+        Our method,
+        <strong style="font-weight: 500"
+          >Adaptive Low-pass Guidance (ALG)</strong
+        >, does exactly this by adaptively modulating the frequency content in
+        images:
+      </p>
+      <ul style="margin-top: 0; margin-left: -10px">
+        <li>
+          we
+          <strong style="color: #1e90ff">enhance video dynamism</strong> by
+          applying
+          <strong style="font-weight: 500"
+            >strong low-pass filtering to the input image early</strong
+          >
+          on (<em>i.e.</em>, t≈0),
+        </li>
+        <li>
+          and then
+          <strong style="color: #1e90ff"
+            >reconstruct the fine image details</strong
+          >
+          by
+          <strong style="font-weight: 500"
+            >lowering the filter strength later</strong
+          >
+          (<em>i.e.</em>, t≈1).
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Result</h2>
+      <hr />
+      <div class="concat-video" style="--scale: 0.999">
+        <div class="cap-row top three">
+          <span>CFG (no filter, default)</span>
+          <span>Constant low-pass filter</span>
+          <span>ALG (Ours)</span>
+        </div>
+        <video
+          src="assets/vids/method.mp4"
+          controls
+          autoplay
+          loop
+          muted
+          playsinline
+        ></video>
+        <div class="cap-row three">
+          <span>
+            <strong style="color: #ff4500">Static motion</strong>,
+            <strong style="color: #1e90ff">high input image fidelity</strong>
+          </span>
+          <span>
+            <strong style="color: #1e90ff">Dynamic motion</strong>,
+            <strong style="color: #ff4500">low input image fidelity</strong>
+          </span>
+          <span>
+            <strong style="color: #1e90ff">Dynamic motion</strong>,
+            <strong style="color: #1e90ff">high input image fidelity</strong>
+          </span>
+        </div>
+      </div>
+      <p>
+        We observe that ALG (right) effectively enhances motion in generated
+        videos without sacrificing the input image fidelity.
+      </p>
+
+      <figure class="figure" style="text-align: center">
+        <img
+          src="assets/imgs/main_table.png"
+          alt="Description of image"
+          style="
+            max-width: 85%;
+            height: auto;
+            margin-top: 0.75em;
+            margin-bottom: 0em;
+          "
+        />
+        <figcaption class="caption" style="text-align: center">
+          We apply low-pass filtering early on for dynamicness, and reduce
+          filter strength later for image fidelity.
+        </figcaption>
+      </figure>
+      <p>
+        Evaluation under VBench-I2V shows on average a 36% increase in Dynamic
+        Degree across 4 commonly used open-source I2V models without a
+        significant drop in image fidelity or video quality.
+      </p>
+
+      <p>
+        More qualitative examples can be found in the
+        <strong style="font-weight: 500"
+          ><a
+            href="gallery/"
+            class="paper-btn gallery-btn"
+            target="_blank"
+            style="
+              color: #4892ba !important;
+              padding-left: 10px;
+              padding-right: 5px;
+              margin-right: -5px;
+            "
+          >
+            <i class="fas fa-photo-video"></i> Gallery page&nbsp;&nbsp;<i
+              class="fas fa-arrow-up-right-from-square"
+            ></i> </a
+        ></strong>
+        of our website.
+      </p>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $(".cap-row-single").on("click", function () {
+          $(this).toggleClass("collapsed expanded");
+        });
+      });
+    </script>
+  </body>
+</html>
