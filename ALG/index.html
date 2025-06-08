@@ -458,6 +458,12 @@
       white-space: normal;
     }
 
+    .cap-row-single.collapsed .caption-text::after {
+      content: " (click to see expand)";
+      color: #999;
+      font-style: italic;
+    }
+
     /* rotate the triangle down when expanded */
     .cap-row-single.expanded .toggle-icon {
       transform: rotate(90deg);
