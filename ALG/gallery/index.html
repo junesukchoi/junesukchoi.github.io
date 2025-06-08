@@ -1,157 +1,264 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
-<head>
-  <meta charset="utf-8"> <!-- It's good practice to declare charset -->
-  <title>Gallery - Enhancing Motion Dynamics of Image-to-Video Models via Adaptive Low-Pass Guidance</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <head>
+    <meta charset="utf-8" />
+    <!-- It's good practice to declare charset -->
+    <title>
+      Gallery - Enhancing Motion Dynamics of Image-to-Video Models via Adaptive
+      Low-Pass Guidance
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- Scripts -->
-  <script type="text/javascript" charset="utf-8" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-  <script type="text/javascript" src="../js/hidebib.js"></script> <!-- Assuming js folder is in parent directory -->
+    <!-- Scripts -->
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script type="text/javascript" src="../js/hidebib.js"></script>
+    <!-- Assuming js folder is in parent directory -->
 
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"/>
-  <!-- FontAwesome was linked twice in original; keeping one updated link. -->
-  <link rel="stylesheet" href="../assets/css/main.css" />
+    <!-- Stylesheets -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <!-- FontAwesome was linked twice in original; keeping one updated link. -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
 
-</head>
+  <body>
+    <div class="container">
+      <div class="paper-title">
+        <h1>
+          Enhancing Motion Dynamics of Image-to-Video Models via Adaptive
+          Low-Pass Guidance
+        </h1>
+      </div>
 
-<body>
-  <div class="container">
-    <div class="paper-title">
-      <h1>
-        Enhancing Motion Dynamics of Image-to-Video Models via Adaptive
-        Low-Pass Guidance
-      </h1>
+      <div id="authors">
+        <center>
+          <div class="author-row-new">
+            <a href="https://choi403.github.io/">June Suk Choi</a>,
+            <a href="https://kyungmnlee.github.io/">Kyungmin Lee</a>,
+            <a href="https://sihyun.me">Sihyun Yu</a>,
+            <a
+              href="https://scholar.google.com/citations?user=pM4aZGYAAAAJ&hl=en"
+              >Yisol Choi</a
+            >, <a href="https://alinlab.kaist.ac.kr/shin.html">Jinwoo Shin</a>,
+            <a href="https://sites.google.com/view/kiminlee">Kimin Lee</a>
+          </div>
+        </center>
+        <center>
+          <div class="affiliations"><span>KAIST</span>   </div>
+        </center>
+        <center>
+          <div class="paper-btn-parent">
+            <a
+              href="https://arxiv.org/abs/XXXX.XXXXX"
+              class="paper-btn arxiv-btn"
+              target="_blank"
+            >
+              <i class="fas fa-file-alt"></i> arXiv
+            </a>
+            <a
+              href="http://github.com/choi403/adaptive-low-pass-guidance"
+              class="paper-btn code-btn"
+              target="_blank"
+            >
+              <i class="fas fa-code"></i> Code
+            </a>
+            <a href="../" class="paper-btn home-btn">
+              <!-- Changed to Home, links to parent dir -->
+              <i class="fas fa-home"></i> Home
+            </a>
+          </div>
+        </center>
+      </div>
+      <section>
+        <h2
+          style="
+            text-align: center;
+            font-weight: 400 !important;
+            color: #4c4c4c;
+            font-size: 24px;
+            margin-bottom: 6px;
+            margin-top: -24px;
+            padding-top: 0px;
+          "
+        >
+          <i class="fas fa-photo-video" style="padding-right: 10px;"></i>Gallery
+        </h2>
+        <hr />
+        <div class="concat-video" style="--scale: 0.999">
+          <!-- Slightly smaller scale for single video -->
+          <div class="cap-row top">
+            <span>Baseline Model</span>
+            <span>Our Model</span>
+          </div>
+          <video
+            src="../assets/vids/additional/a person riding a motorcycle down a road-0.mp4"
+            controls
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+          <div
+            class="cap-row-single expanded"
+            style="pointer-events: none; cursor: default"
+          >
+            <span class="caption-text">
+              <strong style="font-weight: 600">Prompt:</strong>
+              A placeholder prompt for a VBench qualitative result. This video
+              demonstrates [describe content or comparison shown in video]. The
+              prompt is permanently expanded for easy viewing.
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <!-- You can add a H2 title for this section if desired, e.g., <h2>More Examples</h2> <hr/> -->
+        <!-- Row 1 with two videos -->
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px"
+        >
+          <!-- Video Block 1 (Left) -->
+          <div style="flex: 1; min-width: 300px">
+            <!-- min-width for better wrapping on small screens -->
+            <div class="concat-video" style="--scale: 0.999">
+              <video
+                src="../assets/vids/additional/a group of men riding horses in a dusty arena-0.mp4"
+                controls
+                autoplay
+                loop
+                muted
+                playsinline
+              ></video>
+              <div
+                class="cap-row-single expanded"
+                style="pointer-events: none; cursor: default"
+              >
+                <span class="caption-text">
+                  <strong style="font-weight: 600">Prompt:</strong>
+                  Placeholder prompt for the first video in the gallery.
+                  Example: "A cat wearing a tiny hat, riding a skateboard down a
+                  sunlit street."
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Block 2 (Right) -->
+          <div style="flex: 1; min-width: 300px">
+            <div class="concat-video" style="--scale: 0.999">
+              <video
+                src="../assets/vids/additional/a man on a surfboard riding a wave in the ocean-0.mp4"
+                controls
+                autoplay
+                loop
+                muted
+                playsinline
+              ></video>
+              <div
+                class="cap-row-single expanded"
+                style="pointer-events: none; cursor: default"
+              >
+                <span class="caption-text">
+                  <strong style="font-weight: 600">Prompt:</strong>
+                  Placeholder prompt for the second video in the gallery.
+                  Example: "A majestic eagle soaring over snow-capped mountains
+                  at sunset."
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Row 2 with two videos (Example, duplicate this structure for more rows) -->
+        <div
+          style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px"
+        >
+          <!-- Video Block 3 (Left) -->
+          <div style="flex: 1; min-width: 300px">
+            <div class="concat-video" style="--scale: 0.999">
+              <video
+                src="../assets/vids/additional/a steam train traveling through the woods-0.mp4"
+                controls
+                autoplay
+                loop
+                muted
+                playsinline
+              ></video>
+              <div
+                class="cap-row-single expanded"
+                style="pointer-events: none; cursor: default"
+              >
+                <span class="caption-text">
+                  <strong style="font-weight: 600">Prompt:</strong>
+                  Another placeholder prompt. Example: "A futuristic cityscape
+                  with flying cars and neon lights, Blade Runner style."
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video Block 4 (Right) -->
+          <div style="flex: 1; min-width: 300px">
+            <div class="concat-video" style="--scale: 0.999">
+              <video
+                src="../assets/vids/additional/two people scuba diving in the ocean-0.mp4"
+                controls
+                autoplay
+                loop
+                muted
+                playsinline
+              ></video>
+              <div
+                class="cap-row-single expanded"
+                style="pointer-events: none; cursor: default"
+              >
+                <span class="caption-text">
+                  <strong style="font-weight: 600">Prompt:</strong>
+                  Yet another placeholder prompt. Example: "A time-lapse video
+                  of a flower blooming, from bud to full blossom."
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Add more rows as needed by duplicating the div structure above -->
+      </section>
     </div>
+    <!-- end .container -->
 
-    <div id="authors">
-      <center>
-        <div class="author-row-new">
-          <a href="https://choi403.github.io/">June Suk Choi</a>,
-          <a href="https://kyungmnlee.github.io/">Kyungmin Lee</a>,
-          <a href="https://sihyun.me">Sihyun Yu</a>,
-          <a href="https://scholar.google.com/citations?user=pM4aZGYAAAAJ&hl=en">Yisol Choi</a>,
-          <a href="https://alinlab.kaist.ac.kr/shin.html">Jinwoo Shin</a>,
-          <a href="https://sites.google.com/view/kiminlee">Kimin Lee</a>
-        </div>
-      </center>
-      <center>
-        <div class="affiliations"><span>KAIST</span>   </div>
-      </center>
-      <center>
-        <div class="paper-btn-parent">
-          <a href="https://arxiv.org/abs/XXXX.XXXXX" class="paper-btn arxiv-btn" target="_blank">
-            <i class="fas fa-file-alt"></i> arXiv
-          </a>
-          <a href="http://github.com/choi403/adaptive-low-pass-guidance" class="paper-btn code-btn" target="_blank">
-            <i class="fas fa-code"></i> Code
-          </a>
-          <a href="../" class="paper-btn home-btn"> <!-- Changed to Home, links to parent dir -->
-            <i class="fas fa-home"></i> Home
-          </a>
-        </div>
-      </center>
-    </div>
-    <section>
-       <h1 style="text-align: center;">Gallery</h1>
-      <hr />
-      <div class="concat-video" style="--scale: 0.999;"> <!-- Slightly smaller scale for single video -->
-        <div class="cap-row top">
-          <span>Baseline Model</span>
-          <span>Our Model</span>
-        </div>
-        <video src="../assets/vids/additional/a person riding a motorcycle down a road-0.mp4" controls autoplay loop muted playsinline></video>
-        <div class="cap-row-single expanded" style="pointer-events: none; cursor: default">
-          <span class="caption-text">
-            <strong style="font-weight: 600">Prompt:</strong>
-            A placeholder prompt for a VBench qualitative result. This video demonstrates [describe content or comparison shown in video]. The prompt is permanently expanded for easy viewing.
-          </span>
-        </div>
-      </div>
-    </section>
-
-    <section>
-      <!-- You can add a H2 title for this section if desired, e.g., <h2>More Examples</h2> <hr/> -->
-      <!-- Row 1 with two videos -->
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-
-        <!-- Video Block 1 (Left) -->
-        <div style="flex: 1; min-width: 300px;"> <!-- min-width for better wrapping on small screens -->
-          <div class="concat-video" style="--scale: 0.999;">
-            <video src="../assets/vids/additional/a group of men riding horses in a dusty arena-0.mp4" controls autoplay loop muted playsinline></video>
-            <div class="cap-row-single expanded" style="pointer-events: none; cursor: default">
-              <span class="caption-text">
-                <strong style="font-weight: 600">Prompt:</strong>
-                Placeholder prompt for the first video in the gallery. Example: "A cat wearing a tiny hat, riding a skateboard down a sunlit street."
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video Block 2 (Right) -->
-        <div style="flex: 1; min-width: 300px;">
-          <div class="concat-video" style="--scale: 0.999;">
-            <video src="../assets/vids/additional/a man on a surfboard riding a wave in the ocean-0.mp4" controls autoplay loop muted playsinline></video>
-            <div class="cap-row-single expanded" style="pointer-events: none; cursor: default">
-              <span class="caption-text">
-                <strong style="font-weight: 600">Prompt:</strong>
-                Placeholder prompt for the second video in the gallery. Example: "A majestic eagle soaring over snow-capped mountains at sunset."
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Row 2 with two videos (Example, duplicate this structure for more rows) -->
-      <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px;">
-        <!-- Video Block 3 (Left) -->
-        <div style="flex: 1; min-width: 300px;">
-          <div class="concat-video" style="--scale: 0.999;">
-            <video src="../assets/vids/additional/a steam train traveling through the woods-0.mp4" controls autoplay loop muted playsinline></video>
-            <div class="cap-row-single expanded" style="pointer-events: none; cursor: default">
-              <span class="caption-text">
-                <strong style="font-weight: 600">Prompt:</strong>
-                Another placeholder prompt. Example: "A futuristic cityscape with flying cars and neon lights, Blade Runner style."
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <!-- Video Block 4 (Right) -->
-        <div style="flex: 1; min-width: 300px;">
-          <div class="concat-video" style="--scale: 0.999;">
-            <video src="../assets/vids/additional/two people scuba diving in the ocean-0.mp4" controls autoplay loop muted playsinline></video>
-            <div class="cap-row-single expanded" style="pointer-events: none; cursor: default">
-              <span class="caption-text">
-                <strong style="font-weight: 600">Prompt:</strong>
-                Yet another placeholder prompt. Example: "A time-lapse video of a flower blooming, from bud to full blossom."
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- Add more rows as needed by duplicating the div structure above -->
-    </section>
-
-  </div> <!-- end .container -->
-
-  <script>
-    // This script is from the original template, for toggling caption visibility.
-    // Since gallery prompts are permanently expanded via style, this won't affect them,
-    // but it's kept for consistency if styles are changed later.
-    $(function () {
-      $(".cap-row-single").on("click", function () {
-        // Check if the element has pointer-events: none; if so, do not toggle.
-        // The inline style itself should prevent click events, but this is a fallback.
-        if ($(this).css('pointer-events') !== 'none') {
+    <script>
+      // This script is from the original template, for toggling caption visibility.
+      // Since gallery prompts are permanently expanded via style, this won't affect them,
+      // but it's kept for consistency if styles are changed later.
+      $(function () {
+        $(".cap-row-single").on("click", function () {
+          // Check if the element has pointer-events: none; if so, do not toggle.
+          // The inline style itself should prevent click events, but this is a fallback.
+          if ($(this).css("pointer-events") !== "none") {
             $(this).toggleClass("collapsed expanded");
-        }
+          }
+        });
       });
-    });
-  </script>
-</body>
+    </script>
+  </body>
 </html>
