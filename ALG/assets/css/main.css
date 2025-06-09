@@ -591,21 +591,18 @@ video::-moz-media-controls-panel {
   */
 }
 
-/* 2. Collapse any <video> that doesn’t yet have a src attribute */
-video.lazy-video:not([src]) {
-  visibility: hidden;
-  height: 0 !important;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
 .carousel-track video.lazy-video {
   width: 100%;
-  /* height: 270px; */
-  /* aspect-ratio: 31/9; */
-  background: #000;
+  height: 270px;
   object-fit: contain;
+  background: #fff;
+}
+
+@supports (aspect-ratio: auto) {
+  .carousel-track video.lazy-video {
+    aspect-ratio: 640/182.5;
+    height: auto;
+  }
 }
 
 .concat-video {
