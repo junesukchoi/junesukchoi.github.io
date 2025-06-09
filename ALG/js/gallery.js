@@ -1,7 +1,7 @@
 // gallery.js
 const videoList = [
   {
-    section: "Comparison to Closed-source Model (Fig. X)",
+    section: "Comparison to Closed-source Model (Fig. 9)",
     topCaptions: ["OpenAI Sora", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/mammoth.mp4",
     bottomCaption:
@@ -11,7 +11,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "Comparison to Closed-source Model (Fig. X)",
+    section: "Comparison to Closed-source Model (Fig. 9)",
     topCaptions: ["OpenAI Sora", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/otter.mp4",
     bottomCaption:
@@ -22,7 +22,7 @@ const videoList = [
   },
   {
     section:
-      "Comparison Using Synthetically Generated Images (LTX-Video, Fig. X)",
+      "Comparison Using Synthetically Generated Images (LTX-Video, Fig. 10)",
     topCaptions: ["LTX-Video", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/synth/ltx/A dog leaping through the air to catch a frisbee in a sunny park-0.mp4",
     bottomCaption: null,
@@ -32,7 +32,7 @@ const videoList = [
   },
   {
     section:
-      "Comparison Using Synthetically Generated Images (LTX-Video, Fig. X)",
+      "Comparison Using Synthetically Generated Images (LTX-Video, Fig. 10)",
     topCaptions: ["LTX-Video", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/synth/ltx/A jet flying through a cloudy sky leaving a vapor trail-0.mp4",
     bottomCaption: null,
@@ -42,7 +42,7 @@ const videoList = [
   },
   {
     section:
-      "Comparison Using Synthetically Generated Images (LTX-Video, Fig. X)",
+      "Comparison Using Synthetically Generated Images (LTX-Video, Fig. 10)",
     topCaptions: ["LTX-Video", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/synth/ltx/A lion chasing a gazelle across the African savannah, dust flying up behind them-0.mp4",
     bottomCaption: null,
@@ -52,7 +52,7 @@ const videoList = [
   },
   {
     section:
-      "Comparison Using Synthetically Generated Images (LTX-Video, Fig. X)",
+      "Comparison Using Synthetically Generated Images (LTX-Video, Fig. 10)",
     topCaptions: ["LTX-Video", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/synth/ltx/A runner crossing the finish line during a marathon-0.mp4",
     bottomCaption: null,
@@ -62,7 +62,7 @@ const videoList = [
   },
   {
     section:
-      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. X)",
+      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. 11)",
     topCaptions: ["Wan 2.1", "Wan 2.1 + ALG (Our method)"],
     src: "../assets/vids/synth/wan/A snowboarder doing a backflip off a jump-0.mp4",
     bottomCaption: null,
@@ -72,7 +72,7 @@ const videoList = [
   },
   {
     section:
-      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. X)",
+      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. 11)",
     topCaptions: ["Wan 2.1", "Wan 2.1 + ALG (Our method)"],
     src: "../assets/vids/synth/wan/A group of people whitewater rafting in a canyon-0.mp4",
     bottomCaption: null,
@@ -82,7 +82,7 @@ const videoList = [
   },
   {
     section:
-      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. X)",
+      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. 11)",
     topCaptions: ["Wan 2.1", "Wan 2.1 + ALG (Our method)"],
     src: "../assets/vids/synth/wan/A helicopter hovering over a rescue site-0.mp4",
     bottomCaption: null,
@@ -92,7 +92,7 @@ const videoList = [
   },
   {
     section:
-      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. X)",
+      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. 11)",
     topCaptions: ["Wan 2.1", "Wan 2.1 + ALG (Our method)"],
     src: "../assets/vids/synth/wan/A rhino charging toward the camera-0.mp4",
     bottomCaption: null,
@@ -102,7 +102,7 @@ const videoList = [
   },
   {
     section:
-      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. X)",
+      "Comparison Using Synthetically Generated Images (Wan 2.1, Fig. 11)",
     topCaptions: ["Wan 2.1", "Wan 2.1 + ALG (Our method)"],
     src: "../assets/vids/synth/wan/A car chase through narrow city streets at night-0.mp4",
     bottomCaption: null,
@@ -111,7 +111,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "VBench Qualitative Results (Figure X)",
+    section: "VBench Qualitative Results (Fig. 5)",
     topCaptions: ["LTX-Video", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/main/an airplane is flying through the sky at sunset-0.mp4",
     bottomCaption: null,
@@ -120,7 +120,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "VBench Qualitative Results (Figure X)",
+    section: "VBench Qualitative Results (Fig. 5)",
     topCaptions: ["Wan 2.1", "Wan 2.1 + ALG (Our method)"],
     src: "../assets/vids/main/a man swinging a tennis racquet at a tennis ball-0.mp4",
     bottomCaption: null,
@@ -129,7 +129,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "VBench Qualitative Results (Figure X)",
+    section: "VBench Qualitative Results (Fig. 5)",
     topCaptions: ["CogVideoX", "CogVideoX + ALG (Our method)"],
     src: "../assets/vids/main/an eagle is flying over a mountain with trees in the background-0.mp4",
     bottomCaption: null,
@@ -138,7 +138,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "VBench Qualitative Results (Figure X)",
+    section: "VBench Qualitative Results (Fig. 5)",
     topCaptions: ["Wan 2.1", "Wan 2.1 + ALG (Our method)"],
     src: "../assets/vids/main/a red double decker bus driving down a street-0.mp4",
     bottomCaption: null,
@@ -147,7 +147,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "VBench Qualitative Results (Figure X)",
+    section: "VBench Qualitative Results (Fig. 5)",
     topCaptions: ["LTX-Video", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/main/a man and a child riding bumper cars in an amusement park-0.mp4",
     bottomCaption: null,
@@ -156,7 +156,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "VBench Qualitative Results (Figure X)",
+    section: "VBench Qualitative Results (Fig. 5)",
     topCaptions: ["CogVideoX", "CogVideoX + ALG (Our method)"],
     src: "../assets/vids/main/a snowboarder is in the air doing a trick-0.mp4",
     bottomCaption: null,
@@ -165,7 +165,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "VBench Qualitative Results (Figure X)",
+    section: "VBench Qualitative Results (Fig. 5)",
     topCaptions: ["LTX-Video", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/main/A red sports car driving through sand, kicking up a large amount of dust-0.mp4",
     bottomCaption: null,
@@ -174,7 +174,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "VBench Qualitative Results (Figure X)",
+    section: "VBench Qualitative Results (Fig. 5)",
     topCaptions: ["LTX-Video", "LTX-Video + ALG (Our method)"],
     src: "../assets/vids/main/a couple of horses are running in the dirt-0.mp4",
     bottomCaption: null,
@@ -183,7 +183,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "VBench Qualitative Results (Figure X)",
+    section: "VBench Qualitative Results (Fig. 5)",
     topCaptions: ["Wan 2.1", "Wan 2.1 + ALG (Our method)"],
     src: "../assets/vids/main/a group of people riding bikes down a street-0.mp4",
     bottomCaption: null,
@@ -192,7 +192,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "Additional VBench Qualitative Results (Figure X, Figure X)",
+    section: "Additional VBench Qualitative Results (Fig. 7, Fig. 8)",
     topCaptions: ["CogVideoX", "CogVideoX + ALG (Our method)"],
     src: "../assets/vids/additional/a person riding a motorcycle down a road-0.mp4",
     bottomCaption: null,
@@ -201,7 +201,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "Additional VBench Qualitative Results (Figure X, Figure X)",
+    section: "Additional VBench Qualitative Results (Fig. 7, Fig. 8)",
     topCaptions: ["CogVideoX", "CogVideoX + ALG (Our method)"],
     src: "../assets/vids/additional/a train traveling down tracks through the woods with leaves on the ground-0.mp4",
     bottomCaption: null,
@@ -210,7 +210,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "Additional VBench Qualitative Results (Figure X, Figure X)",
+    section: "Additional VBench Qualitative Results (Fig. 7, Fig. 8)",
     topCaptions: ["CogVideoX", "CogVideoX + ALG (Our method)"],
     src: "../assets/vids/additional/a group of men riding horses in a dusty arena-0.mp4",
     bottomCaption: null,
@@ -219,7 +219,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "Additional VBench Qualitative Results (Figure X, Figure X)",
+    section: "Additional VBench Qualitative Results (Fig. 7, Fig. 8)",
     topCaptions: ["HunyuanVideo", "HunyuanVideo + ALG (Our method)"],
     src: "../assets/vids/additional/two people scuba diving in the ocean-0.mp4",
     bottomCaption: null,
@@ -228,7 +228,7 @@ const videoList = [
     doubleLayout: false,
   },
   {
-    section: "Additional VBench Qualitative Results (Figure X, Figure X)",
+    section: "Additional VBench Qualitative Results (Fig. 7, Fig. 8)",
     topCaptions: ["HunyuanVideo", "HunyuanVideo + ALG (Our method)"],
     src: "../assets/vids/additional/a steam train traveling through the woods-0.mp4",
     bottomCaption: null,
@@ -690,26 +690,30 @@ const videoList = [
 ];
 
 // 1. Create a single observer for all videos
-const videoObserver = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    const vid = entry.target;
-    // 2. Swap in the real source
-    vid.src = vid.dataset.src;
-    // 3. Kick off loading & playback
-    vid.load();
-    vid.play();
-    // 4. No longer needed
-    obs.unobserve(vid);
-  });
-}, {
-  rootMargin: '200px 0px'  // start loading a bit before they hit the viewport
-});
+const videoObserver = new IntersectionObserver(
+  (entries, obs) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      const vid = entry.target;
+      // 2. Swap in the real source
+      vid.src = vid.dataset.src;
+      // 3. Kick off loading & playback
+      vid.load();
+      vid.play();
+      // 4. No longer needed
+      obs.unobserve(vid);
+    });
+  },
+  {
+    rootMargin: "200px 0px", // start loading a bit before they hit the viewport
+  }
+);
 
 // 5. After renderGallery() runs, attach the observer to each lazy video
 function observeLazyVideos() {
-  document.querySelectorAll('video.lazy-video')
-    .forEach(v => videoObserver.observe(v));
+  document
+    .querySelectorAll("video.lazy-video")
+    .forEach((v) => videoObserver.observe(v));
 }
 
 // 6. Kick it off once gallery is in the DOM
@@ -717,7 +721,6 @@ $(document).ready(() => {
   renderGallery();
   observeLazyVideos();
 });
-
 
 function renderGallery() {
   const $gallery = $("#gallery").empty();
