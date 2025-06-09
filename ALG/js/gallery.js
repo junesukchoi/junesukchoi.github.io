@@ -689,6 +689,36 @@ const videoList = [
   },
 ];
 
+// 1. Create a single observer for all videos
+const videoObserver = new IntersectionObserver((entries, obs) => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const vid = entry.target;
+    // 2. Swap in the real source
+    vid.src = vid.dataset.src;
+    // 3. Kick off loading & playback
+    vid.load();
+    vid.play();
+    // 4. No longer needed
+    obs.unobserve(vid);
+  });
+}, {
+  rootMargin: '200px 0px'  // start loading a bit before they hit the viewport
+});
+
+// 5. After renderGallery() runs, attach the observer to each lazy video
+function observeLazyVideos() {
+  document.querySelectorAll('video.lazy-video')
+    .forEach(v => videoObserver.observe(v));
+}
+
+// 6. Kick it off once gallery is in the DOM
+$(document).ready(() => {
+  renderGallery();
+  observeLazyVideos();
+});
+
+
 function renderGallery() {
   const $gallery = $("#gallery").empty();
 
@@ -751,9 +781,17 @@ function createBlock(vid) {
     $w.append(`<div class="cap-row top">${spans}</div>`);
   }
   // Video element
-  $w.append(
-    `<video src="${vid.src}" controls autoplay loop muted playsinline></video>`
-  );
+  $w.append(`
+    <video
+      controls
+      loop
+      muted
+      playsinline
+      preload="none"
+      data-src="${vid.src}"
+      class="lazy-video"
+    ></video>
+  `);
 
   // Figure out which caption to show
   let captionText = "";
