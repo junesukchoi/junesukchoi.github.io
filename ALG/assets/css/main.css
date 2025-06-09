@@ -576,3 +576,70 @@ video::-moz-media-controls-panel {
   color: #335263 !important;
   transform: translateY(-2px);
 }
+
+
+/* 2. Carousel styling */
+.video-carousel {
+  position: relative;
+  width: 100%;            /* or whatever fixed width you prefer */
+  overflow: hidden;
+}
+.carousel-track {
+  display: flex;
+  transition: transform 0.4s ease;
+  /* optional: enable scroll-snap
+  scroll-snap-type: x mandatory;
+  */
+}
+.concat-video {
+  flex: 0 0 100%;         /* each item takes 100% of carousel width */
+  box-sizing: border-box; /* preserve your padding */
+  /* retain all your existing styles here */
+  /* e.g. padding, --scale, etc. */
+  /* optional: if you use scroll-snap:
+     scroll-snap-align: start;
+  */
+}
+/* 3. Prev/Next buttons */
+.carousel-btn {
+  position: absolute;
+  top: 40%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: rgba(255,255,255,0.8);
+  border: none;
+  font-size: 2.125rem;
+  cursor: pointer;
+  padding: 0.2em 0.4em;
+}
+.carousel-btn.prev { left: 0.5em; }
+.carousel-btn.next { right: 0.5em; }
+
+
+/* reserve a little space under the track for the dots */
+.video-carousel { padding-bottom: 2em; }
+
+/* container for the dots */
+.carousel-dots {
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  margin-top: 0.1em;
+}
+
+/* each dot */
+.carousel-dots .dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 0 5px;
+  border-radius: 50%;
+  background: #ccc;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+/* active/current slide */
+.carousel-dots .dot.active {
+  background: #333;
+}
