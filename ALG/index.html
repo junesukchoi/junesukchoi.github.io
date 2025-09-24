@@ -1,27 +1,32 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
-  <script
-    type="text/javascript"
-    charset="utf-8"
-    src="https://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js"
-  ></script>
-  <script
-    id="MathJax-script"
-    async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
-  ></script>
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
-  />
-
-  <script type="text/javascript" src="../js/hidebib.js"></script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
-    rel="stylesheet"
-  />
-
   <head>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != "dataLayer" ? "&l=" + l : "";
+        j.async = true;
+        j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, "script", "dataLayer", "GTM-PHJTT4QT");
+    </script>
     <title>
       Enhancing Motion Dynamics of Image-to-Video Models via Adaptive Low-Pass
       Guidance
@@ -31,14 +36,50 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=FontAwesome"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="assets/css/main.css" />
+    <meta
+      name="description"
+      content="We propose Adaptive Low-pass Guidance (ALG), a simple training-free method, to enhance motion dynamics in image-to-video models without sacrificing quality."
+    />
+    <meta
+      name="author"
+      content="June Suk Choi, Kyungmin Lee, Sihyun Yu, Yisol Choi, Jinwoo Shin, Kimin Lee"
+    />
+    <meta
+      property="og:title"
+      content="Enhancing Motion Dynamics of Image-to-Video Models via Adaptive Low-Pass Guidance"
+    />
+    <meta
+      property="og:description"
+      content="We propose Adaptive Low-pass Guidance (ALG), a simple training-free method, to enhance motion dynamics in image-to-video models without sacrificing quality."
+    />
+    <meta
+      name="twitter:title"
+      content="Enhancing Motion Dynamics of Image-to-Video Models via Adaptive Low-Pass Guidance"
+    />
+    <meta
+      name="twitter:description"
+      content="We propose Adaptive Low-pass Guidance (ALG), a simple training-free method, to enhance motion dynamics in image-to-video models without sacrificing quality."
+    />
+    <meta
+      property="og:image"
+      content="https://choi403.github.io/assets/imgs/overview.png"
+    />
+    <meta
+      name="twitter:image"
+      content="https://choi403.github.io/assets/imgs/overview.png"
+    />
   </head>
 
   <body>
+    <noscript
+      ><iframe
+        src="https://www.googletagmanager.com/ns.html?id=GTM-PHJTT4QT"
+        height="0"
+        width="0"
+        style="display: none; visibility: hidden"
+      ></iframe
+    ></noscript>
     <div class="container">
       <div class="paper-title">
         <h1>
@@ -66,20 +107,20 @@
         <center>
           <div class="paper-btn-parent">
             <a
-              href="https://arxiv.org/abs/XXXX.XXXXX"
+              href="https://arxiv.org/abs/2506.08456"
               class="paper-btn arxiv-btn"
               target="_blank"
             >
               <i class="fas fa-file-alt"></i> arXiv
             </a>
             <a
-              href="http://github.com/choi403/adaptive-low-pass-guidance"
+              href="http://github.com/choi403/ALG"
               class="paper-btn code-btn"
               target="_blank"
             >
               <i class="fas fa-code"></i> Code
             </a>
-            <a href="gallery/" class="paper-btn gallery-btn">
+            <a href="gallery/" class="paper-btn explore gallery-btn">
               <i class="fas fa-photo-video"></i> Gallery
             </a>
           </div>
@@ -120,37 +161,6 @@
                 high in the distance creates a warm glow, the low camera view is
                 stunning capturing the large furry mammal with beautiful
                 photography, depth of field.
-              </span>
-              <span class="toggle-text">(Click to expand)</span>
-            </div>
-          </div>
-          <div class="concat-video" style="--scale: 0.999">
-            <div class="cap-row top">
-              <span>OpenAI Sora</span>
-              <span
-                ><strong style="color: #389bd0; font-weight: 500"
-                  >ALG (Our method) + LTX-Video</strong
-                ></span
-              >
-            </div>
-            <video
-              class="lazy-video"
-              data-src="assets/vids/otter.mp4"
-              preload="none"
-              controls
-              autoplay
-              loop
-              muted
-              playsinline
-            ></video>
-            <div
-              class="cap-row-single expanded"
-              style="pointer-events: none; cursor: default; text-align: center"
-            >
-              <span class="caption-text">
-                <strong style="font-weight: 600">Prompt:</strong>
-                An adorable happy otter confidently stands on a surfboard
-                wearing a yellow lifejacket, riding along.
               </span>
               <span class="toggle-text">(Click to expand)</span>
             </div>
@@ -213,6 +223,37 @@
                 <strong style="font-weight: 600">Prompt:</strong>
                 A dog leaping through the air to catch a frisbee in a sunny
                 park.
+              </span>
+              <span class="toggle-text">(Click to expand)</span>
+            </div>
+          </div>
+          <div class="concat-video" style="--scale: 0.999">
+            <div class="cap-row top">
+              <span>OpenAI Sora</span>
+              <span
+                ><strong style="color: #389bd0; font-weight: 500"
+                  >ALG (Our method) + LTX-Video</strong
+                ></span
+              >
+            </div>
+            <video
+              class="lazy-video"
+              data-src="assets/vids/otter.mp4"
+              preload="none"
+              controls
+              autoplay
+              loop
+              muted
+              playsinline
+            ></video>
+            <div
+              class="cap-row-single expanded"
+              style="pointer-events: none; cursor: default; text-align: center"
+            >
+              <span class="caption-text">
+                <strong style="font-weight: 600">Prompt:</strong>
+                An adorable happy otter confidently stands on a surfboard
+                wearing a yellow lifejacket, riding along.
               </span>
               <span class="toggle-text">(Click to expand)</span>
             </div>
@@ -461,345 +502,349 @@
         <div class="carousel-dots"></div>
         <button class="carousel-btn next">›</button>
       </div>
-    </div>
-    <!-- ... -->
-    <section>
-      <h2 style="padding-top: 0px">Overview</h2>
-      <hr />
 
-      <p>
-        Text-to-video (T2V) models excel at producing high-quality, dynamic
-        videos, and recent works have adapted these pre-trained T2V models for
-        image-to-video (I2V) generation to enhance visual controllability.
-        However, this adaptation often
-        <strong style="font-weight: 500"
-          >suppresses motion dynamics, yielding more static videos</strong
-        >
-        than their T2V counterparts.
-      </p>
-      <p>In this work, we analyze this phenomenon and identify that:</p>
-      <blockquote>
-        The suppression of motion in I2V models stems from the
-        <strong style="font-weight: 500"
-          >premature exposure to high-frequency details</strong
-        >
-        in the input image, which biases the sampling process toward a
-        <strong style="font-weight: 500">shortcut trajectory</strong> that
-        overfits to the static appearance of the reference image.
-      </blockquote>
-      <p>
-        To address this, we propose
-        <strong style="font-weight: 500"
-          >Adaptive Low-pass Guidance (ALG)</strong
-        >, a simple fix to the I2V model sampling process to generate more
-        dynamic videos without compromising video quality. Specifically, ALG
-        adaptively modulates the frequency content of the conditioning image by
-        <strong style="font-weight: 500; color: #3b6176"
-          >applying low-pass filtering to the input image</strong
-        >
-        at the early stage of denoising.
-      </p>
+      <!-- ... -->
+      <section>
+        <h2 style="padding-top: 0px">Overview</h2>
+        <hr />
 
-      <figure class="figure" style="text-align: center">
-        <img
-          src="assets/imgs/method.png"
-          alt="Description of image"
-          style="
-            max-width: 85%;
-            height: auto;
-            margin-top: 0.75em;
-            margin-bottom: 0em;
-          "
-        />
-        <figcaption class="caption" style="text-align: center">
-          Our method (ALG) mitigates the motion suppression in I2V models by
-          adaptively modulating the frequency content of the input image.
-        </figcaption>
-      </figure>
-
-      <p>
-        Under VBench-I2V benchmark, ALG achieves an average improvement of 36%
-        in dynamic degree without a significant drop in video quality or image
-        fidelity.
-      </p>
-    </section>
-
-    <section>
-      <h2>Problem: Suppressed Motion in I2V Models</h2>
-      <hr />
-      <p>
-        Image-to-Video (I2V) models offer enhanced visual control by animating a
-        user-provided image from text prompts. However, these models, frequently
-        adapted from Text-to-Video (T2V) architectures, often produce
-        <strong style="font-weight: 500">much more static videos</strong>
-        than their T2V counterparts, even for dynamic descriptions.
-      </p>
-
-      <h3>Observation: T2V-I2V motion dynamics gap.</h3>
-      <p>
-        We first systemically quantify this "motion suppression". Specifically,
-        we compare T2V models to their I2V derivatives in a controlled setup:
-        videos were first generated by T2V models, and we use their initial
-        frames as I2V inputs with the same prompts. This lets us focus only on
-        the difference of conditioning mechanism, and rule out other factors
-        like model architecture or train data.
-      </p>
-      <p>
-        Quantitative evaluation in VBench reveals a consistent and significant
-        reduction
-        <strong style="font-weight: 500">only in video dynamicness</strong> for
-        I2V models (e.g., -18.6% for Wan 2.1), while other quality metrics
-        remain stable. This indicates that the I2V conditioning mechanism itself
-        is a primary contributor to the observed motion suppression.
-      </p>
-      <figure class="figure" style="text-align: center">
-        <img
-          src="assets/imgs/suppression.png"
-          alt="Table comparing T2V and I2V motion dynamics"
-          style="max-width: 80%"
-        />
-        <figcaption class="caption" style="text-align: center">
-          Significant drop in Dynamic Degree is seen for I2V models compared to
-          their T2V counterparts, while other factors remain more or less
-          similar; this gives us clue that the I2V conditioning mechanism is the
-          problematic factor.
-        </figcaption>
-      </figure>
-
-      <h3>
-        Hypothesis: Over-conditioning on high-frequency details lead to
-        "shortcuts."
-      </h3>
-      <p>
-        We hypothesize that this motion suppression stems from the I2V model's
-        premature over-conditioning on
-        <strong style="font-weight: 500">high-frequency components</strong>
-        (fine details, textures, sharp edges) present in the reference image.
-      </p>
-      <p>
-        To investigate further, we inspect the internal representation of DiT
-        denoiser (Wan 2.1) and visualize them using PCA. We observe that the
-        model rapidly "locks in" onto the static, fine-grained details, even
-        after just one denoising step. This early completion ("shortcut")
-        prematurely confines the generation trajectory, and hinders the
-        development of large, dynamic motion over time (which is expected in
-        natural coarse-to-fine generation trajectories).
-      </p>
-
-      <figure class="figure" style="text-align: center">
-        <img
-          src="assets/imgs/shortcut_orig.png"
-          alt="Visualization of shortcut effect in I2V generation"
-          style="max-width: 95%"
-        />
-        <figcaption class="caption">
-          I2V generation shows fine details locking in very early (t=0.02;
-          single denoising step), limiting the flexibilty of the sampling
-          trajectory.
-        </figcaption>
-      </figure>
-
-      <h3>Diagnosis: Low-pass filtering mitigates suppression at a cost.</h3>
-      <p>
-        To verify if the high-frequency detail indeed is the cause, we apply
-        low-pass filters (e.g., image downsampling) of varying strengths to the
-        input image before I2V generation. The results support our hypothesis:
-        <strong style="font-weight: 500"
-          >stronger low-pass filtering consistently increases the dynamic
-          degree</strong
-        >
-        of the generated videos.
-      </p>
-      <figure class="figure" style="text-align: center">
-        <img
-          src="assets/imgs/lp.png"
-          alt="Effect of low-pass filtering on motion dynamics and quality"
-          style="max-width: 80%"
-        />
-        <figcaption class="caption">
-          Low-pass filtering the input image improves motion but degrades
-          quality. (a) Increasing filter strength boosts Dynamic Degree but
-          reduces Aesthetic Quality (VBench). (b) Visual examples illustrate
-          this trade-off.
-        </figcaption>
-      </figure>
-
-      <h3>Low-pass filtering mitigates the "shortcut" effect.</h3>
-      <p>
-        Alongside this dynamicness enhancement, we observe the
-        <strong style="font-weight: 500">elimination of the "shortcut"</strong>
-        effect (bottom row):
-      </p>
-      <figure class="figure" style="text-align: center">
-        <img
-          src="assets/imgs/shortcut.png"
-          alt="Visualization of shortcut effect in I2V generation"
-          style="max-width: 95%"
-        />
-        <figcaption class="caption">
-          Low-pass filtering mitigates the "shortcut" effect and reverts it back
-          to the natural coarse-to-fine generation trajectory.
-        </figcaption>
-      </figure>
-      <p>
-        This reverts the trajectory back to a coarse-to-fine one, and allows
-        more flexibility in the trajectory. Thus, the sampling results in a more
-        dynamic video.
-      </p>
-    </section>
-
-    <section>
-      <h2>Method: Adaptive Low-Pass Guidance (ALG)</h2>
-      <hr />
-
-      <p>
-        However, the simple low-pass filtering "solution" discussed above has an
-        inherent trade-off: aggressive low-pass filtering degrades image
-        fidelity, as the model is conditioned on an blurred reference
-        (<em>i.e.</em>, impossible to recover original image). This motivates a
-        more nuanced sampling method:
-      </p>
-
-      <blockquote>
-        If the <strong style="font-weight: 500">early shortcut</strong> in the
-        trajectory causes motion suppression, can we
-        <strong style="font-weight: 500"
-          >bypass it with low-pass filtering in early sampling steps</strong
-        >, then
-        <strong style="font-weight: 500"
-          >reduce the filter strength later for image fidelity</strong
-        >?
-      </blockquote>
-
-      <figure class="figure" style="text-align: center">
-        <img
-          src="assets/imgs/method.png"
-          alt="Description of image"
-          style="
-            max-width: 85%;
-            height: auto;
-            margin-top: 0.75em;
-            margin-bottom: 0em;
-          "
-        />
-        <figcaption class="caption" style="text-align: center">
-          We apply low-pass filtering early on for dynamicness, and reduce
-          filter strength later for image fidelity.
-        </figcaption>
-      </figure>
-      <p style="margin-bottom: 8px">
-        Our method,
-        <strong style="font-weight: 500"
-          >Adaptive Low-pass Guidance (ALG)</strong
-        >, does exactly this by adaptively modulating the frequency content in
-        images:
-      </p>
-      <ul style="margin-top: 0; margin-left: -10px">
-        <li>
-          we
-          <strong style="color: #1e90ff">enhance video dynamism</strong> by
-          applying
+        <p>
+          Text-to-video (T2V) models excel at producing high-quality, dynamic
+          videos, and recent works have adapted these pre-trained T2V models for
+          image-to-video (I2V) generation to enhance visual controllability.
+          However, this adaptation often
           <strong style="font-weight: 500"
-            >strong low-pass filtering to the input image early</strong
+            >suppresses motion dynamics, yielding more static videos</strong
           >
-          on (<em>i.e.</em>, t≈0),
-        </li>
-        <li>
-          and then
-          <strong style="color: #1e90ff"
-            >reconstruct the fine image details</strong
+          than their T2V counterparts.
+        </p>
+        <p>In this work, we analyze this phenomenon and identify that:</p>
+        <blockquote>
+          The suppression of motion in I2V models stems from the
+          <strong style="font-weight: 500"
+            >premature exposure to high-frequency details</strong
           >
+          in the input image, which biases the sampling process toward a
+          <strong style="font-weight: 500">shortcut trajectory</strong> that
+          overfits to the static appearance of the reference image.
+        </blockquote>
+        <p>
+          To address this, we propose
+          <strong style="font-weight: 500"
+            >Adaptive Low-pass Guidance (ALG)</strong
+          >, a simple fix to the I2V model sampling process to generate more
+          dynamic videos without compromising video quality. Specifically, ALG
+          adaptively modulates the frequency content of the conditioning image
           by
-          <strong style="font-weight: 500"
-            >lowering the filter strength later</strong
+          <strong style="font-weight: 500; color: #3b6176"
+            >applying low-pass filtering to the input image</strong
           >
-          (<em>i.e.</em>, t≈1).
-        </li>
-      </ul>
-    </section>
+          at the early stage of denoising.
+        </p>
 
-    <section>
-      <h2>Result</h2>
-      <hr />
-      <div class="concat-video" style="--scale: 0.999">
-        <div class="cap-row top three">
-          <span>CFG (no filter, default)</span>
-          <span>Constant low-pass filter</span>
-          <span>ALG (Ours)</span>
-        </div>
-        <video
-          src="assets/vids/method.mp4"
-          controls
-          autoplay
-          loop
-          muted
-          playsinline
-        ></video>
-        <div class="cap-row three">
-          <span>
-            <strong style="color: #ff4500">Static motion</strong>,
-            <strong style="color: #1e90ff">high input image fidelity</strong>
-          </span>
-          <span>
-            <strong style="color: #1e90ff">Dynamic motion</strong>,
-            <strong style="color: #ff4500">low input image fidelity</strong>
-          </span>
-          <span>
-            <strong style="color: #1e90ff">Dynamic motion</strong>,
-            <strong style="color: #1e90ff">high input image fidelity</strong>
-          </span>
-        </div>
-      </div>
-      <p>
-        We observe that ALG (right) effectively enhances motion in generated
-        videos without sacrificing the input image fidelity.
-      </p>
-
-      <figure class="figure" style="text-align: center">
-        <img
-          src="assets/imgs/main_table.png"
-          alt="Description of image"
-          style="
-            max-width: 85%;
-            height: auto;
-            margin-top: 0.75em;
-            margin-bottom: 0em;
-          "
-        />
-        <figcaption class="caption" style="text-align: center">
-          We apply low-pass filtering early on for dynamicness, and reduce
-          filter strength later for image fidelity.
-        </figcaption>
-      </figure>
-      <p>
-        Evaluation under VBench-I2V shows on average a 36% increase in Dynamic
-        Degree across 4 commonly used open-source I2V models without a
-        significant drop in image fidelity or video quality.
-      </p>
-
-      <p>
-        More qualitative examples can be found in the
-        <strong style="font-weight: 500"
-          ><a
-            href="gallery/"
-            class="paper-btn gallery-btn"
-            target="_blank"
+        <figure class="figure" style="text-align: center">
+          <img
+            src="assets/imgs/method.png"
+            alt="Description of image"
             style="
-              color: #4892ba !important;
-              padding-left: 10px;
-              padding-right: 5px;
-              margin-right: -5px;
+              max-width: 85%;
+              height: auto;
+              margin-top: 0.75em;
+              margin-bottom: 0em;
             "
-          >
-            <i class="fas fa-photo-video"></i> Gallery page&nbsp;&nbsp;<i
-              class="fas fa-arrow-up-right-from-square"
-            ></i> </a
-        ></strong>
-        of our website.
-      </p>
-    </section>
+          />
+          <figcaption class="caption" style="text-align: center">
+            Our method (ALG) mitigates the motion suppression in I2V models by
+            adaptively modulating the frequency content of the input image.
+          </figcaption>
+        </figure>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <p>
+          Under VBench-I2V benchmark, ALG achieves an average improvement of 36%
+          in dynamic degree without a significant drop in video quality or image
+          fidelity.
+        </p>
+      </section>
+
+      <section>
+        <h2>Problem: Suppressed Motion in I2V Models</h2>
+        <hr />
+        <p>
+          Image-to-Video (I2V) models offer enhanced visual control by animating
+          a user-provided image from text prompts. However, these models,
+          frequently adapted from Text-to-Video (T2V) architectures, often
+          produce
+          <strong style="font-weight: 500">much more static videos</strong>
+          than their T2V counterparts, even for dynamic descriptions.
+        </p>
+
+        <h3>Observation: T2V-I2V motion dynamics gap.</h3>
+        <p>
+          We first systemically quantify this "motion suppression".
+          Specifically, we compare T2V models to their I2V derivatives in a
+          controlled setup: videos were first generated by T2V models, and we
+          use their initial frames as I2V inputs with the same prompts. This
+          lets us focus only on the difference of conditioning mechanism, and
+          rule out other factors like model architecture or train data.
+        </p>
+        <p>
+          Quantitative evaluation in VBench reveals a consistent and significant
+          reduction
+          <strong style="font-weight: 500">only in video dynamicness</strong>
+          for I2V models (e.g., -18.6% for Wan 2.1), while other quality metrics
+          remain stable. This indicates that the I2V conditioning mechanism
+          itself is a primary contributor to the observed motion suppression.
+        </p>
+        <figure class="figure" style="text-align: center">
+          <img
+            src="assets/imgs/suppression.png"
+            alt="Table comparing T2V and I2V motion dynamics"
+            style="max-width: 80%"
+          />
+          <figcaption class="caption" style="text-align: center">
+            Significant drop in Dynamic Degree is seen for I2V models compared
+            to their T2V counterparts, while other factors remain more or less
+            similar; this gives us clue that the I2V conditioning mechanism is
+            the problematic factor.
+          </figcaption>
+        </figure>
+
+        <h3>
+          Hypothesis: Over-conditioning on high-frequency details lead to
+          "shortcuts."
+        </h3>
+        <p>
+          We hypothesize that this motion suppression stems from the I2V model's
+          premature over-conditioning on
+          <strong style="font-weight: 500">high-frequency components</strong>
+          (fine details, textures, sharp edges) present in the reference image.
+        </p>
+        <p>
+          To investigate further, we inspect the internal representation of DiT
+          denoiser (Wan 2.1) and visualize them using PCA. We observe that the
+          model rapidly "locks in" onto the static, fine-grained details, even
+          after just one denoising step. This early completion ("shortcut")
+          prematurely confines the generation trajectory, and hinders the
+          development of large, dynamic motion over time (which is expected in
+          natural coarse-to-fine generation trajectories).
+        </p>
+
+        <figure class="figure" style="text-align: center">
+          <img
+            src="assets/imgs/shortcut_orig.png"
+            alt="Visualization of shortcut effect in I2V generation"
+            style="max-width: 95%"
+          />
+          <figcaption class="caption">
+            I2V generation shows fine details locking in very early (t=0.02;
+            single denoising step), limiting the flexibilty of the sampling
+            trajectory.
+          </figcaption>
+        </figure>
+
+        <h3>Diagnosis: Low-pass filtering mitigates suppression at a cost.</h3>
+        <p>
+          To verify if the high-frequency detail indeed is the cause, we apply
+          low-pass filters (e.g., image downsampling) of varying strengths to
+          the input image before I2V generation. The results support our
+          hypothesis:
+          <strong style="font-weight: 500"
+            >stronger low-pass filtering consistently increases the dynamic
+            degree</strong
+          >
+          of the generated videos.
+        </p>
+        <figure class="figure" style="text-align: center">
+          <img
+            src="assets/imgs/lp.png"
+            alt="Effect of low-pass filtering on motion dynamics and quality"
+            style="max-width: 80%"
+          />
+          <figcaption class="caption">
+            Low-pass filtering the input image improves motion but degrades
+            quality. (a) Increasing filter strength boosts Dynamic Degree but
+            reduces Aesthetic Quality (VBench). (b) Visual examples illustrate
+            this trade-off.
+          </figcaption>
+        </figure>
+
+        <h3>Low-pass filtering mitigates the "shortcut" effect.</h3>
+        <p>
+          Alongside this dynamicness enhancement, we observe the
+          <strong style="font-weight: 500"
+            >elimination of the "shortcut"</strong
+          >
+          effect (bottom row):
+        </p>
+        <figure class="figure" style="text-align: center">
+          <img
+            src="assets/imgs/shortcut.png"
+            alt="Visualization of shortcut effect in I2V generation"
+            style="max-width: 95%"
+          />
+          <figcaption class="caption">
+            Low-pass filtering mitigates the "shortcut" effect and reverts it
+            back to the natural coarse-to-fine generation trajectory.
+          </figcaption>
+        </figure>
+        <p>
+          This reverts the trajectory back to a coarse-to-fine one, and allows
+          more flexibility in the trajectory. Thus, the sampling results in a
+          more dynamic video.
+        </p>
+      </section>
+
+      <section>
+        <h2>Method: Adaptive Low-Pass Guidance (ALG)</h2>
+        <hr />
+
+        <p>
+          However, the simple low-pass filtering "solution" discussed above has
+          an inherent trade-off: aggressive low-pass filtering degrades image
+          fidelity, as the model is conditioned on an blurred reference
+          (<em>i.e.</em>, impossible to recover original image). This motivates
+          a more nuanced sampling method:
+        </p>
+
+        <blockquote>
+          If the <strong style="font-weight: 500">early shortcut</strong> in the
+          trajectory causes motion suppression, can we
+          <strong style="font-weight: 500"
+            >bypass it with low-pass filtering in early sampling steps</strong
+          >, then
+          <strong style="font-weight: 500"
+            >reduce the filter strength later for image fidelity</strong
+          >?
+        </blockquote>
+
+        <figure class="figure" style="text-align: center">
+          <img
+            src="assets/imgs/method.png"
+            alt="Description of image"
+            style="
+              max-width: 85%;
+              height: auto;
+              margin-top: 0.75em;
+              margin-bottom: 0em;
+            "
+          />
+          <figcaption class="caption" style="text-align: center">
+            We apply low-pass filtering early on for dynamicness, and reduce
+            filter strength later for image fidelity.
+          </figcaption>
+        </figure>
+        <p style="margin-bottom: 8px">
+          Our method,
+          <strong style="font-weight: 500"
+            >Adaptive Low-pass Guidance (ALG)</strong
+          >, does exactly this by adaptively modulating the frequency content in
+          images:
+        </p>
+        <ul style="margin-top: 0; margin-left: -10px">
+          <li>
+            we
+            <strong style="color: #1e90ff">enhance video dynamism</strong> by
+            applying
+            <strong style="font-weight: 500"
+              >strong low-pass filtering to the input image early</strong
+            >
+            on (<em>i.e.</em>, t≈0),
+          </li>
+          <li>
+            and then
+            <strong style="color: #1e90ff"
+              >reconstruct the fine image details</strong
+            >
+            by
+            <strong style="font-weight: 500"
+              >lowering the filter strength later</strong
+            >
+            (<em>i.e.</em>, t≈1).
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Result</h2>
+        <hr />
+        <div class="concat-video" style="--scale: 0.999">
+          <div class="cap-row top three">
+            <span>CFG (no filter, default)</span>
+            <span>Constant low-pass filter</span>
+            <span>ALG (Ours)</span>
+          </div>
+          <video
+            src="assets/vids/method.mp4"
+            controls
+            autoplay
+            loop
+            muted
+            playsinline
+          ></video>
+          <div class="cap-row three">
+            <span>
+              <strong style="color: #ff4500">Static motion</strong>,
+              <strong style="color: #1e90ff">high input image fidelity</strong>
+            </span>
+            <span>
+              <strong style="color: #1e90ff">Dynamic motion</strong>,
+              <strong style="color: #ff4500">low input image fidelity</strong>
+            </span>
+            <span>
+              <strong style="color: #1e90ff">Dynamic motion</strong>,
+              <strong style="color: #1e90ff">high input image fidelity</strong>
+            </span>
+          </div>
+        </div>
+        <p>
+          We observe that ALG (right) effectively enhances motion in generated
+          videos without sacrificing the input image fidelity.
+        </p>
+
+        <figure class="figure" style="text-align: center">
+          <img
+            src="assets/imgs/main_table.png"
+            alt="Description of image"
+            style="
+              max-width: 85%;
+              height: auto;
+              margin-top: 0.75em;
+              margin-bottom: 0em;
+            "
+          />
+          <figcaption class="caption" style="text-align: center">
+            We apply low-pass filtering early on for dynamicness, and reduce
+            filter strength later for image fidelity.
+          </figcaption>
+        </figure>
+        <p>
+          Evaluation under VBench-I2V shows on average a 36% increase in Dynamic
+          Degree across 4 commonly used open-source I2V models without a
+          significant drop in image fidelity or video quality.
+        </p>
+
+        <p>
+          More qualitative examples can be found in the
+          <strong style="font-weight: 500"
+            ><a
+              href="gallery/"
+              class="paper-btn gallery-btn"
+              target="_blank"
+              style="
+                color: #4892ba !important;
+                padding-left: 10px;
+                padding-right: 5px;
+                margin-right: -5px;
+              "
+            >
+              <i class="fas fa-photo-video"></i> Gallery page&nbsp;&nbsp;<i
+                class="fas fa-arrow-up-right-from-square"
+              ></i> </a
+          ></strong>
+          of our website.
+        </p>
+      </section>
+    </div>
     <script>
       $(function () {
         $(".cap-row-single").on("click", function () {
@@ -808,22 +853,21 @@
       });
     </script>
     <script>
-      
-// 1) create a shared observer to watch all lazy videos
-const videoObserver = new IntersectionObserver((entries, obs) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    const vid = entry.target;
-    // swap in the real URL
-    vid.src = vid.dataset.src;
-    vid.load();
-    vid.play();
-    // stop observing once loaded
-    obs.unobserve(vid);
-  });
-}, {
-  rootMargin: '200px 0px'   // preload a bit before fully in view
-});
+      const videoObserver = new IntersectionObserver(
+        (entries, obs) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const vid = entry.target;
+            vid.src = vid.dataset.src;
+            vid.load();
+            vid.play();
+            obs.unobserve(vid);
+          });
+        },
+        {
+          rootMargin: "200px 0px",
+        }
+      );
 
       document.addEventListener("DOMContentLoaded", () => {
         const track = document.querySelector(".carousel-track");
@@ -831,11 +875,9 @@ const videoObserver = new IntersectionObserver((entries, obs) => {
         const nextBtn = document.querySelector(".carousel-btn.next");
         const dotsCon = document.querySelector(".carousel-dots");
 
-        // 1) grab original slides
         const origSlides = Array.from(track.children);
         const slideCount = origSlides.length;
 
-        // 2) clone first & last for infinite scroll
         const firstClone = origSlides[0].cloneNode(true);
         firstClone.id = "first-clone";
         const lastClone = origSlides[slideCount - 1].cloneNode(true);
@@ -843,20 +885,16 @@ const videoObserver = new IntersectionObserver((entries, obs) => {
         track.appendChild(firstClone);
         track.insertBefore(lastClone, origSlides[0]);
 
-        // 3) rebuild slides array & set up initial state
-        const slides = Array.from(track.children); // length = slideCount + 2
-        let index = 1; // start on real first
+        const slides = Array.from(track.children);
+        let index = 1;
         let W = track.clientWidth;
 
-        // disable transition for the initial jump
         track.style.transition = "none";
         track.style.transform = `translateX(-${W * index}px)`;
-        // then re-enable transition on the next frame
         requestAnimationFrame(() => {
           track.style.transition = "transform 0.4s ease";
         });
 
-        // 4) build dot indicators
         for (let i = 0; i < slideCount; i++) {
           const dot = document.createElement("span");
           dot.classList.add("dot");
@@ -869,30 +907,25 @@ const videoObserver = new IntersectionObserver((entries, obs) => {
           });
         }
 
-        // 5) helper to animate to slide i
         function moveTo(i) {
           track.style.transition = "transform 0.4s ease";
           track.style.transform = `translateX(-${W * i}px)`;
         }
 
-        // 6) normalize index for dots (1…slideCount)
         function realSlide(i) {
           if (slides[i].id === "first-clone") return 1;
           else if (slides[i].id === "last-clone") return slideCount;
           else return i;
         }
 
-        // 7) highlight current dot
         function highlightDot(n) {
           dotsCon.querySelectorAll(".dot").forEach((dot) => {
             dot.classList.toggle("active", Number(dot.dataset.slide) === n);
           });
         }
 
-        // 8) init first dot
         highlightDot(realSlide(index));
 
-        // 9) arrow button handlers (immediate dot update)
         nextBtn.addEventListener("click", () => {
           if (index >= slides.length - 1) return;
           index++;
@@ -906,7 +939,6 @@ const videoObserver = new IntersectionObserver((entries, obs) => {
           highlightDot(realSlide(index));
         });
 
-        // 10) on transition end, snap from clones to real slides
         track.addEventListener("transitionend", () => {
           if (slides[index].id === "first-clone") {
             track.style.transition = "none";
@@ -920,44 +952,16 @@ const videoObserver = new IntersectionObserver((entries, obs) => {
           }
         });
 
-        // 11) handle window resize
         window.addEventListener("resize", () => {
           W = track.clientWidth;
           track.style.transition = "none";
           track.style.transform = `translateX(-${W * index}px)`;
         });
 
-        // 2) once the carousel DOM is ready, observe every lazy‐video
-document
-  .querySelectorAll('video.lazy-video')
-  .forEach(v => videoObserver.observe(v));
+        document
+          .querySelectorAll("video.lazy-video")
+          .forEach((v) => videoObserver.observe(v));
       });
-      // document.addEventListener('DOMContentLoaded', () => {
-      //   const track     = document.querySelector('.carousel-track');
-      //   const items     = Array.from(track.children);
-      //   const prevBtn   = document.querySelector('.carousel-btn.prev');
-      //   const nextBtn   = document.querySelector('.carousel-btn.next');
-      //   const itemCount = items.length;
-      //   let index       = 0;
-
-      //   function updateCarousel() {
-      //     const offset = index * track.clientWidth;
-      //     track.style.transform = `translateX(-${offset}px)`;
-      //   }
-
-      //   prevBtn.addEventListener('click', () => {
-      //     index = (index - 1 + itemCount) % itemCount;
-      //     updateCarousel();
-      //   });
-
-      //   nextBtn.addEventListener('click', () => {
-      //     index = (index + 1) % itemCount;
-      //     updateCarousel();
-      //   });
-
-      //   // Optional: resize handler to re-compute width if viewport changes
-      //   window.addEventListener('resize', updateCarousel);
-      // });
     </script>
   </body>
 </html>

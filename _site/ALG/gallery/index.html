@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>
+      Gallery - Enhancing Motion Dynamics of Image-to-Video Models via Adaptive
+      Low-Pass Guidance
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script
+      type="text/javascript"
+      charset="utf-8"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    ></script>
+    <script
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
+    ></script>
+    <script type="text/javascript" src="../js/hidebib.js"></script>
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="paper-title">
+        <h1>
+          Enhancing Motion Dynamics of Image-to-Video Models via Adaptive
+          Low-Pass Guidance
+        </h1>
+      </div>
+
+      <div id="authors">
+        <center>
+          <div class="author-row-new">
+            <a href="https://choi403.github.io/">June Suk Choi</a>,
+            <a href="https://kyungmnlee.github.io/">Kyungmin Lee</a>,
+            <a href="https://sihyun.me">Sihyun Yu</a>,
+            <a
+              href="https://scholar.google.com/citations?user=pM4aZGYAAAAJ&hl=en"
+              >Yisol Choi</a
+            >, <a href="https://alinlab.kaist.ac.kr/shin.html">Jinwoo Shin</a>,
+            <a href="https://sites.google.com/view/kiminlee">Kimin Lee</a>
+          </div>
+        </center>
+        <center>
+          <div class="affiliations"><span>KAIST</span>   </div>
+        </center>
+        <center>
+          <div class="paper-btn-parent">
+            <a
+              href="https://arxiv.org/abs/2506.08456"
+              class="paper-btn arxiv-btn"
+              target="_blank"
+            >
+              <i class="fas fa-file-alt"></i> arXiv
+            </a>
+            <a
+              href="http://github.com/choi403/ALG"
+              class="paper-btn code-btn"
+              target="_blank"
+            >
+              <i class="fas fa-code"></i> Code
+            </a>
+            <a href="../" class="paper-btn home-btn">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </div>
+        </center>
+      </div>
+      <section>
+        <h2
+          style="
+            text-align: center;
+            font-weight: 400 !important;
+            color: #4c4c4c;
+            font-size: 24px;
+            margin-bottom: 6px;
+            margin-top: -24px;
+            padding-top: 0px;
+          "
+        >
+          <i class="fas fa-photo-video" style="padding-right: 10px"></i>Gallery
+        </h2>
+      </section>
+      <section id="gallery"></section>
+    </div>
+
+    <script>
+      $(function () {
+        $(".cap-row-single").on("click", function () {
+          if ($(this).css("pointer-events") !== "none") {
+            $(this).toggleClass("collapsed expanded");
+          }
+        });
+      });
+    </script>
+    <script src="../js/gallery.js" defer></script>
+    <script>
+      $(document).ready(renderGallery);
+    </script>
+  </body>
+</html>

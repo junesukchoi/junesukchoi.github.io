@@ -1,4 +1,3 @@
-// gallery.js
 const videoList = [
   {
     section: "Comparison to Closed-source Model (Fig. 9)",
@@ -689,34 +688,28 @@ const videoList = [
   },
 ];
 
-// 1. Create a single observer for all videos
 const videoObserver = new IntersectionObserver(
   (entries, obs) => {
     entries.forEach((entry) => {
       if (!entry.isIntersecting) return;
       const vid = entry.target;
-      // 2. Swap in the real source
       vid.src = vid.dataset.src;
-      // 3. Kick off loading & playback
       vid.load();
       vid.play();
-      // 4. No longer needed
       obs.unobserve(vid);
     });
   },
   {
-    rootMargin: "200px 0px", // start loading a bit before they hit the viewport
+    rootMargin: "200px 0px",
   }
 );
 
-// 5. After renderGallery() runs, attach the observer to each lazy video
 function observeLazyVideos() {
   document
     .querySelectorAll("video.lazy-video")
     .forEach((v) => videoObserver.observe(v));
 }
 
-// 6. Kick it off once gallery is in the DOM
 $(document).ready(() => {
   renderGallery();
   observeLazyVideos();
@@ -725,7 +718,6 @@ $(document).ready(() => {
 function renderGallery() {
   const $gallery = $("#gallery").empty();
 
-  // group by section
   const sections = videoList.reduce((acc, vid) => {
     (acc[vid.section] || (acc[vid.section] = [])).push(vid);
     return acc;
@@ -739,12 +731,10 @@ function renderGallery() {
       </h2><hr/>
     `);
 
-    // non–doubleLayout as full width
     vids
       .filter((v) => !v.doubleLayout)
       .forEach((v) => $sec.append(createBlock(v)));
 
-    // doubleLayout side-by-side
     const doubles = vids.filter((v) => v.doubleLayout);
     for (let i = 0; i < doubles.length; i += 2) {
       const $row = $("<div>").css({
@@ -771,7 +761,6 @@ function renderGallery() {
 function createBlock(vid) {
   const $w = $("<div>").addClass("concat-video").css("--scale", 0.999);
 
-  // Top captions
   if (vid.topCaptions?.length) {
     const spans = vid.topCaptions
       .map((c, i) =>
@@ -783,7 +772,6 @@ function createBlock(vid) {
 
     $w.append(`<div class="cap-row top">${spans}</div>`);
   }
-  // Video element
   $w.append(`
     <video
       controls
@@ -796,12 +784,10 @@ function createBlock(vid) {
     ></video>
   `);
 
-  // Figure out which caption to show
   let captionText = "";
   if (vid.bottomCaption) {
     captionText = vid.bottomCaption;
   } else {
-    // try to parse from filename
     const fn = vid.src.split("/").pop() || "";
     const base = fn.split("-")[0] || "";
     if (base.trim()) {
@@ -809,10 +795,8 @@ function createBlock(vid) {
     }
   }
 
-  // If there’s no caption at all, skip adding the div
   if (!captionText) return $w;
 
-  // Build the bottom caption block
   const alignStr = vid.align ? vid.align : "center";
   const foldClass = vid.bottomFoldable ? "collapsed" : "expanded";
   const pointerStyle = vid.bottomFoldable
@@ -822,7 +806,6 @@ function createBlock(vid) {
 
   let bottomHtml;
   if (vid.doubleLayout) {
-    // split on '|' if you want two spans, otherwise just one span
     const parts = captionText.split("|");
     bottomHtml = parts
       .map(

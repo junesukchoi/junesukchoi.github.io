@@ -1,13 +1,24 @@
 papers:
+  - title: "[P2] Enhancing Motion Dynamics of Image-to-Video Models via Adaptive Low-Pass Guidance"
+    authors: "<b><u>June Suk Choi</u></b>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://sihyun.me/'>Sihyun Yu</a>, <a href='https://alinlab.kaist.ac.kr/members.html'>Yisol Choi</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee</a>"
+    venue: "Preprint"
+    arxiv: "https://arxiv.org/abs/2506.08456"
+    code: "https://github.com/choi403/ALG"
+    website: "https://choi403.github.io/ALG"
+    selected: y
+
   - title: "[C5] Enhancing LLM Agent Safety via Causal Influence Prompting"
     authors: "<a href='https://sites.google.com/view/kiminlee/group'>Dongyoon Hahm</a>, <a href='https://sites.google.com/view/kiminlee/group'>Woogyeol Jin</a>, <b><u>June Suk Choi</u></b>, <a href='https://sites.google.com/view/sungsooahn0215'>Sungsoo Ahn</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee</a>"
     venue: "Findings of the Association for Computational Linguistics <b>(ACL Findings)</b>, 2025"
+    arxiv: "https://arxiv.org/abs/2507.00979"
+    code: "https://github.com/HahmDY/causal_influence_prompting"
     selected: y
 
   - title: "[C4] Silent Branding Attack: Trigger-free Data Poisoning Attack on Text-to-Image Diffusion Models"
     authors: "<a href='https://agwmon.github.io/'>Sangwon Jang</a>, <b><u>June Suk Choi</u></b>, <a href='https://harryjo97.github.io/'>Jaehyeong Jo</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee<sup>^</sup></a>, <a href='http://www.sungjuhwang.com/'>Sung Ju Hwang<sup>^</sup></a>"
     venue: "IEEE/CVF Conference on Computer Vision and Pattern Recognition <b>(CVPR)</b>, 2025"
     arxiv: https://arxiv.org/abs/2503.09669
+    code: "https://github.com/agwmon/silent-branding-attack"
     website: "https://silent-branding.github.io/"
     selected: y
 
@@ -16,6 +27,7 @@ papers:
     venue: "International Conference on Learning Representations <b>(ICLR)</b>, 2025"
     arxiv: https://arxiv.org/abs/2410.05694
     code: "https://github.com/choi403/DiffusionGuard"
+    website: "https://choi403.github.io/diffusionguard"
     selected: y
 
   - title: "[C2] DiffExp: Efficient Exploration in Reward Fine-tuning for Text-to-Image Diffusion Models"

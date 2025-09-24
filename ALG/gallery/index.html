@@ -1,15 +1,13 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <html>
   <head>
     <meta charset="utf-8" />
-    <!-- It's good practice to declare charset -->
     <title>
       Gallery - Enhancing Motion Dynamics of Image-to-Video Models via Adaptive
       Low-Pass Guidance
     </title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <!-- Scripts -->
     <script
       type="text/javascript"
       charset="utf-8"
@@ -21,9 +19,7 @@
       src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
     ></script>
     <script type="text/javascript" src="../js/hidebib.js"></script>
-    <!-- Assuming js folder is in parent directory -->
 
-    <!-- Stylesheets -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -36,7 +32,6 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <!-- FontAwesome was linked twice in original; keeping one updated link. -->
     <link rel="stylesheet" href="../assets/css/main.css" />
   </head>
 
@@ -68,21 +63,20 @@
         <center>
           <div class="paper-btn-parent">
             <a
-              href="https://arxiv.org/abs/XXXX.XXXXX"
+              href="https://arxiv.org/abs/2506.08456"
               class="paper-btn arxiv-btn"
               target="_blank"
             >
               <i class="fas fa-file-alt"></i> arXiv
             </a>
             <a
-              href="http://github.com/choi403/adaptive-low-pass-guidance"
+              href="http://github.com/choi403/ALG"
               class="paper-btn code-btn"
               target="_blank"
             >
               <i class="fas fa-code"></i> Code
             </a>
             <a href="../" class="paper-btn home-btn">
-              <!-- Changed to Home, links to parent dir -->
               <i class="fas fa-home"></i> Home
             </a>
           </div>
@@ -102,20 +96,13 @@
         >
           <i class="fas fa-photo-video" style="padding-right: 10px"></i>Gallery
         </h2>
-        <!-- <hr /> -->
       </section>
       <section id="gallery"></section>
     </div>
-    <!-- end .container -->
 
     <script>
-      // This script is from the original template, for toggling caption visibility.
-      // Since gallery prompts are permanently expanded via style, this won't affect them,
-      // but it's kept for consistency if styles are changed later.
       $(function () {
         $(".cap-row-single").on("click", function () {
-          // Check if the element has pointer-events: none; if so, do not toggle.
-          // The inline style itself should prevent click events, but this is a fallback.
           if ($(this).css("pointer-events") !== "none") {
             $(this).toggleClass("collapsed expanded");
           }
@@ -124,7 +111,6 @@
     </script>
     <script src="../js/gallery.js" defer></script>
     <script>
-      // kick things off
       $(document).ready(renderGallery);
     </script>
   </body>

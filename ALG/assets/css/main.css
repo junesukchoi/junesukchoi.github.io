@@ -296,7 +296,6 @@ pre {
   border-bottom: 1px solid black;
 }
 
-/* Clearfix (clear floats) */
 .row::after {
   content: "";
   clear: both;
@@ -363,7 +362,6 @@ pre {
 
 blockquote {
   font-weight: 300;
-  /* background-color: rgba(40, 40, 40, 0.2); */
   background-color: #d8e3ea;
   padding: 0px;
   margin: 2px 0;
@@ -388,7 +386,6 @@ blockquote {
 .video-card video {
   width: 100%;
   height: auto;
-  /* aspect-ratio removed */
   object-fit: contain;
   border-radius: 0.5rem;
 }
@@ -405,14 +402,12 @@ blockquote {
   font: 15px/1.4 system-ui, sans-serif;
 }
 
-/* 1) Base style — copy straight from your “before” CSS */
 .cap-row-single {
   display: grid;
-  grid-template-columns: auto 1fr; /* icon + text */
-  column-gap: 0.5rem; /* space between icon & text */
-  align-items: center; /* vertically center icon/text */
+  grid-template-columns: auto 1fr;
+  column-gap: 0.5rem;
+  align-items: center;
   text-align: left;
-  /* restore your former padding/margins/font-size */
   padding-inline: 0rem;
   margin: 0.4rem 0;
   margin-bottom: 1rem;
@@ -420,7 +415,6 @@ blockquote {
   cursor: pointer;
 }
 
-/* 2) Tiny tweak so that our “(click to expand)” spans get the same transition styling */
 .cap-row-single .toggle-text {
   transition: transform 0.2s ease;
 }
@@ -430,9 +424,7 @@ blockquote {
   font-weight: 500;
 }
 
-/* 3) Only *override* the things that need changing when collapsed */
 .cap-row-single.collapsed {
-  /* override just the layout & overflow */
   display: flex;
   width: 100%;
   white-space: nowrap;
@@ -449,7 +441,6 @@ blockquote {
   margin-left: 0.3em;
 }
 
-/* 4) And when expanded, revert just those overrides */
 .cap-row-single.expanded {
   display: block;
   white-space: normal;
@@ -461,67 +452,65 @@ blockquote {
 .cap-row-single.expanded .toggle-text {
   display: none;
 }
-/* ——— 2.  Shared styles for caption rows (top & bottom) ———— */
+
 .cap-row {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* left / right halves           */
+  grid-template-columns: 1fr 1fr;
   column-gap: 0.5rem;
   text-align: center;
-  margin: 0.4rem 0; /* space above / below the row   */
+  margin: 0.4rem 0;
 }
 .cap-row.top {
   font-weight: 300;
-  font-size: 1.2rem; /* ↑ adjust this to taste */
-} /* emphasise model names       */
+  font-size: 1.2rem;
+}
 .cap-row.top.three {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* three equal columns */
-  column-gap: 0.5rem; /* spacing between captions */
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.5rem;
   font-weight: 300;
-  font-size: 1.1rem; /* ↑ adjust this to taste */
-} /* emphasise model names       */
+  font-size: 1.1rem;
+}
 .cap-row.bottom {
   font-size: 0.9em;
   font-weight: 300;
 }
 .cap-row.three {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* three equal columns */
-  column-gap: 0.5rem; /* spacing between captions */
-  text-align: center; /* center the text */
-  margin: 0.4rem 0; /* space above/below the row */
-  font-size: 0.9rem; /* match your other bottoms */
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 0.5rem;
+  text-align: center;
+  margin: 0.4rem 0;
+  font-size: 0.9rem;
   font-weight: 300;
 }
 
 .concat-video video {
-  display: block; /* remove inline-block gap               */
+  display: block;
   width: 100%;
   height: auto;
-  /* aspect-ratio removed */
   object-fit: contain;
 }
 
-/* Hide WebKit (Chrome, Safari, Edge) controls */
 video::-webkit-media-controls-panel,
 video::-webkit-media-controls-enclosure,
 video::-webkit-media-controls {
   display: none !important;
 }
 
-/* Hide Firefox controls */
 video::-moz-media-controls-panel {
   display: none !important;
 }
 
 .abstract-structured-content p {
-  margin-bottom: 1em; /* Add some space between paragraphs */
+  margin-bottom: 1em;
 }
 .abstract-structured-content p:last-child {
-  margin-bottom: -1em; /* No extra space after the last paragraph */
+  margin-bottom: -1em;
 }
 
 .paper-btn {
+  position: relative;
   display: inline-flex;
   align-items: center;
   padding: 0.45em 0.9em;
@@ -567,7 +556,6 @@ video::-moz-media-controls-panel {
 }
 
 .home-btn {
-  /* Changed from gallery-btn for clarity, same style */
   background: #ffffff;
   color: #40667b !important;
 }
@@ -577,18 +565,14 @@ video::-moz-media-controls-panel {
   transform: translateY(-2px);
 }
 
-/* 2. Carousel styling */
 .video-carousel {
   position: relative;
-  width: 100%; /* or whatever fixed width you prefer */
+  width: 100%;
   overflow: hidden;
 }
 .carousel-track {
   display: flex;
   transition: transform 0.4s ease;
-  /* optional: enable scroll-snap
-  scroll-snap-type: x mandatory;
-  */
 }
 
 .carousel-track video.lazy-video {
@@ -606,15 +590,10 @@ video::-moz-media-controls-panel {
 }
 
 .concat-video {
-  flex: 0 0 100%; /* each item takes 100% of carousel width */
-  box-sizing: border-box; /* preserve your padding */
-  /* retain all your existing styles here */
-  /* e.g. padding, --scale, etc. */
-  /* optional: if you use scroll-snap:
-     scroll-snap-align: start;
-  */
+  flex: 0 0 100%;
+  box-sizing: border-box;
 }
-/* 3. Prev/Next buttons */
+
 .carousel-btn {
   position: absolute;
   top: 40%;
@@ -633,12 +612,10 @@ video::-moz-media-controls-panel {
   right: 0.5em;
 }
 
-/* reserve a little space under the track for the dots */
 .video-carousel {
   padding-bottom: 2em;
 }
 
-/* container for the dots */
 .carousel-dots {
   text-align: center;
   position: relative;
@@ -646,7 +623,6 @@ video::-moz-media-controls-panel {
   margin-top: 0.1em;
 }
 
-/* each dot */
 .carousel-dots .dot {
   display: inline-block;
   width: 10px;
@@ -658,7 +634,6 @@ video::-moz-media-controls-panel {
   transition: background 0.2s;
 }
 
-/* active/current slide */
 .carousel-dots .dot.active {
   background: #333;
 }
@@ -666,3 +641,56 @@ video::-moz-media-controls-panel {
 video::-webkit-media-controls-start-playback-button {
   display: none !important;
 }
+
+.paper-btn .badge {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  background: #e9865f;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.paper-btn .badge-available {
+  position: absolute;
+  top: -4px;
+  right: -8px;
+  background: #3b89c4;
+  color: white;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.paper-btn {
+  position: relative;
+}
+
+.paper-btn.explore::after {
+  content: "Explore!";
+  position: absolute;
+  top: -4px;
+  right: -7px;
+  padding: 4px 6px;
+  font-size: 0.625rem;
+  font-weight: 600;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 3px;
+  background: #3b89c4;
+  color: white;
+  animation: twinkle 1.25s ease-in-out infinite alternate;
+}
+
+@keyframes twinkle {
+  0%   { opacity: 1; transform: scale(0.99); }
+  50%  { opacity: 1; transform: scale(1.1); }
+  100% { opacity: 1; transform: scale(0.99); }
+}
+
