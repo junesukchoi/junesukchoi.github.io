@@ -1,10 +1,18 @@
 papers:
-  - title: "[P2] Enhancing Motion Dynamics of Image-to-Video Models via Adaptive Low-Pass Guidance"
+  - title: "[P1] Enhancing Motion Dynamics of Image-to-Video Models via Adaptive Low-Pass Guidance"
     authors: "<b><u>June Suk Choi</u></b>, <a href='https://kyungmnlee.github.io/'>Kyungmin Lee</a>, <a href='https://sihyun.me/'>Sihyun Yu</a>, <a href='https://alinlab.kaist.ac.kr/members.html'>Yisol Choi</a>, <a href='https://alinlab.kaist.ac.kr/shin.html'>Jinwoo Shin</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee</a>"
     venue: "Preprint"
     arxiv: "https://arxiv.org/abs/2506.08456"
     code: "https://github.com/choi403/ALG"
     website: "https://choi403.github.io/ALG"
+    selected: y
+
+  - title: "[C6] MobileSafetyBench: Evaluating Safety of Autonomous Agents in Mobile Device Control"
+    authors: "<a href='https://jylee425.github.io/'>Juyong Lee<sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></a>, <a href='https://sites.google.com/view/kiminlee/group/'>Dongyoon Hahm<sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></a>, <b><u>June Suk Choi</u><sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></b>, <a href='https://bradknox.net/'>W. Bradley Knox</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee</a>"
+    venue: "AAAI Conference on Artificial Intelligence, Special Track on AI Alignment <b>(AAAI)</b>, 2026"
+    website: "https://mobilesafetybench.github.io/"
+    arxiv: "https://arxiv.org/abs/2410.17520"
+    code: "https://github.com/jylee425/mobilesafetybench"
     selected: y
 
   - title: "[C5] Enhancing LLM Agent Safety via Causal Influence Prompting"
@@ -42,12 +50,4 @@ papers:
     website: "https://subin-kim-cv.github.io/CSD/"
     arxiv: "https://arxiv.org/abs/2307.04787"
     code: "https://github.com/subin-kim-cv/CSD/"
-    selected: y
-
-  - title: "[P1] MobileSafetyBench: Evaluating Safety of Autonomous Agents in Mobile Device Control"
-    authors: "<a href='https://jylee425.github.io/'>Juyong Lee<sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></a>, <a href='https://sites.google.com/view/kiminlee/group/'>Dongyoon Hahm<sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></a>, <b><u>June Suk Choi</u><sup style='position: relative; top: 7px; font-size: 1.9em;'>*</sup></b>, <a href='https://bradknox.net/'>W. Bradley Knox</a>, <a href='https://sites.google.com/view/kiminlee/'>Kimin Lee</a>"
-    venue: "Preprint"
-    website: "https://mobilesafetybench.github.io/"
-    arxiv: "https://arxiv.org/abs/2410.17520"
-    code: "https://github.com/jylee425/mobilesafetybench"
     selected: y
